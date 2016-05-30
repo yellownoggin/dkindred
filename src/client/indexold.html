@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <title>Angular Material - Starter App</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="../bower_components/angular-material/angular-material.css" />
+    <link rel="stylesheet" href="../node_modules/angular-jk-carousel/dist/jk-carousel.css" />
+
+
+    <!-- build:css css/lib.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/angular-material/angular-material.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css css/app.css -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/src/client/css/app.css">
+    <link rel="stylesheet" href="/src/client/css/on-the-fly.css">
+    <link rel="stylesheet" href="/src/client/css/style.css">
+    <!-- endinject -->
+    <!-- endbuild -->
+
+
+    <style type="text/css">
+        /**
+         * Hide when Angular is not yet loaded and initialized
+         */
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+          display: none !important;
+        }
+    </style>
+
+  </head>
+
+  <body ng-app="kindred" layout="column" ng-controller="UserController as ul" ng-cloak>
+
+
+
+    <div layout="row" flex >
+
+        <md-sidenav  ng-click="ul.toggleList()" md-is-locked-open="$mdMedia('gt-sm')" md-component-id="left" class="md-whiteframe-z2" >
+        <!-- <md-sidenav  ng-click="ul.toggleList()" md-is-locked-open="false" md-component-id="left" class="md-whiteframe-z2" > -->
+
+          <header class="navigation-header">
+            <h1>Kindred Components</h1>
+          </header>
+          <md-list>
+            <md-button><a href="#/">Home</a></md-button>
+            <md-button><a href="#/users">Users</a></md-button>
+            <md-button><a href="#/design-components">Design Components</a></md-button>
+            <md-button><a href="#/design-components/mdexpress">Md Express</a></md-button>
+          </md-list>
+
+
+        </md-sidenav>
+
+        <div layout="column" flex>
+
+          <md-toolbar layout="row">
+            <div class="md-toolbar-tools">
+              <md-button class="menu" hide-gt-sm ng-click="ul.toggleList()" aria-label="Show User List">
+                <md-icon md-svg-icon="menu" ></md-icon>
+              </md-button>
+              <h2 class="md-toolbar-item md-breadcrumb md-headline">Home</h1>
+            </div>
+          </md-toolbar>
+
+          <md-content flex layout="column" id="content">
+            <div ui-view="main_content" class=""></div>
+
+          </md-content>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- build:js js/lib.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-messages/angular-messages.js"></script>
+    <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="/bower_components/angular-aria/angular-aria.js"></script>
+    <script src="/bower_components/angular-material/angular-material.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+
+    <!-- build:js js/app.js -->
+    <!-- inject:js -->
+    <script src="/src/client/app/kindred.module.js"></script>
+    <script src="/src/client/app/core/core.module.js"></script>
+    <script src="/src/client/app/rfx/rfx.module.js"></script>
+    <script src="/src/client/app/users/users.module.js"></script>
+    <script src="/src/client/app/components/design-components/designComponents.module.js"></script>
+    <script src="/src/client/app/components/design-components/md-panel-carousel/md-panel-carousel.module.js"></script>
+    <script src="/src/client/app/components/design-components/mdexpress-card/mdexpress-card.module.js"></script>
+    <script src="/src/client/app/components/design-components/mdexpress-card-original/mdexpress-card.module.js"></script>
+    <script src="/src/client/app/components/design-components/panel-carousel/panel-carousel.module.js"></script>
+    <script src="/src/client/app/test.js"></script>
+    <script src="/src/client/app/doctest/doctest.js"></script>
+    <script src="/src/client/app/users/users.controller.js"></script>
+    <script src="/src/client/app/users/users.route.js"></script>
+    <script src="/src/client/app/users/users.service.js"></script>
+    <script src="/src/client/app/components/design-components/designComponents.route.js"></script>
+    <script src="/src/client/app/components/design-components/mdexpress-card/mdexpress-card.directive.js"></script>
+    <script src="/src/client/app/components/design-components/mdexpress-card-original/mdexpress-card.controller.js"></script>
+    <script src="/src/client/app/components/design-components/panel-carousel/panel-carousel.controller.js"></script>
+    <!-- endinject -->
+
+    <!-- inject:templates:js -->
+    <!-- endinject -->
+    <!--endbuild -->
+
+
+  </body>
+</html>

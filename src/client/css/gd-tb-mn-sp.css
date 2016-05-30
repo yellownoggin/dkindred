@@ -1,0 +1,39 @@
+/*NOTE: requires site width to work the way designed max width
+.site-width {
+    max-width: 1240px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    display: block;
+    width: 100%;
+
+}*/
+
+.gd-tb-mn-sp {
+    height: 64px;
+}
+.gd-site-title-link-small {
+    font-weight: 400;
+    font-size: 20px;
+    position: relative;
+    left: 32px;
+    color: #ffffff;
+}
+.gd-tb-mn-sp .navigation {
+    font-family: "Roboto Mono", Roboto, sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.25px;
+}
+
+/*TODO: distinguish this is a right & gd-tb...*/
+.navigation-items .navigation-item {
+    display: inline-block;
+    text-transform: uppercase;
+}
+.navigation-items .navigation-item a {
+    color: #ffffff;
+    padding: 0px 12px 0px 12px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+}

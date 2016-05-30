@@ -1,0 +1,20 @@
+<md-card class="mdexpress-card md-default-theme mock-image" layout="column" flex>
+  <a ng-href="" ng-style="vm.cardImageStyle"  class="md-expressCardBannerImage">
+  <img ng-src="{{vm.cardImage}}" alt="" class="md-card-image">
+  </a>
+  <md-card-content flex="noshrink">
+
+    <md-card-title>
+      <md-card-title-text>
+        <h2 class="md-title">Card Title</h2>
+        <p class="" flex>Subheadline information</p>
+      </md-card-title-text>
+    </md-card-title>
+  </md-card-content>
+  <md-card-actions layout="row" layout-align="start end">
+  <md-button ng-href="" class="mdexpress-primary-blue md-button md-ink-ripple padding-fix" ng-transclude>
+    <span class="padding-fix">Call to action link</span>
+  </md-button>
+
+  </md-card-actions>
+</md-card>

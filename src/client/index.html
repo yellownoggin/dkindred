@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <title>Angular Material - Starter App</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="../bower_components/angular-material/angular-material.css" />
+    <link rel="stylesheet" href="../node_modules/angular-jk-carousel/dist/jk-carousel.css" />
+
+
+    <!-- build:css css/lib.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/angular-material/angular-material.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css css/app.css -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/src/client/css/common.css">
+    <link rel="stylesheet" href="/src/client/css/gd-tb-mn-sp.css">
+    <link rel="stylesheet" href="/src/client/css/layout.css">
+    <link rel="stylesheet" href="/src/client/css/style.css">
+    <!-- endinject -->
+    <!-- endbuild -->
+
+
+    <style type="text/css">
+        /**
+         * Hide when Angular is not yet loaded and initialized
+         */
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+          display: none !important;
+        }
+    </style>
+
+  </head>
+
+  <body ng-app="dkindred" layout="column" ng-cloak>
+
+<div layout="column" layout-fill>
+    <md-toolbar md-scroll-shrink md-shrink-speed-factor="0.5">
+        <div class="site-width">
+            <div layout="row" layout-align="start center" class="gd-tb-mn-sp">
+                <div class="site-title" flex="20" class="navigation-text-left">
+                <!-- TODO: Needs to be cleaned/diciphered -->
+                <a href="#" class="gd-site-title-link-small">
+                    <span>D</span>
+                    <span class="_dot"></span>
+                    <span>Kindred</span>
+                	</a>
+                </div>
+                <div class="gd-tb-mn-sp-separator" flex="35"></div>
+                <div class="gd-tb-mn-sp-text-right" flex="40">
+                    <nav class="navigation js-nav-state">
+                     <!-- <h2 class="off-screen"></h2> -->
+                     <ul class="navigation-items" style="list-style-type: none;">
+                       <li class="navigation-item"><a href="#" ng-style="">Full Stack</a></li>
+                       <li class="navigation-item"><a href="#" ng-style="">Marketeering</a></li>
+                       <li class="navigation-item"><a href="#" ng-style="">About</a></li>
+                     </ul>
+                   </nav>
+                </div>
+            </div>
+        </div>
+
+    </md-toolbar>
+    <!--Note: for scrollShrink to work, the toolbar must be a sibling of a md-content element, placed before it.-->
+    <md-content>
+    <div ui-view></div>
+    </md-content>
+</div>
+
+
+
+
+
+    <!-- build:js js/lib.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-messages/angular-messages.js"></script>
+    <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="/bower_components/angular-aria/angular-aria.js"></script>
+    <script src="/bower_components/angular-material/angular-material.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+
+    <!-- build:js js/app.js -->
+    <!-- inject:js -->
+    <script src="/src/client/app/dkindred.module.js"></script>
+    <script src="/src/client/app/dkindred.config.js"></script>
+    <!-- endinject -->
+
+    <!-- inject:templates:js -->
+    <!-- endinject -->
+    <!--endbuild -->
+
+
+  </body>
+</html>
