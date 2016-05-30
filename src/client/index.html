@@ -44,38 +44,12 @@
 
   <body ng-app="dkindred" layout="column" ng-cloak>
 
-<div layout="column" layout-fill>
-    <md-toolbar md-scroll-shrink md-shrink-speed-factor="0.5">
-        <div class="site-width">
-            <div layout="row" layout-align="start center" class="gd-tb-mn-sp">
-                <div class="site-title" flex="20" class="navigation-text-left">
-                <!-- TODO: Needs to be cleaned/diciphered -->
-                <a href="#" class="gd-site-title-link-small">
-                    <span>D</span>
-                    <span class="_dot"></span>
-                    <span>Kindred</span>
-                	</a>
-                </div>
-                <div class="gd-tb-mn-sp-separator" flex="35"></div>
-                <div class="gd-tb-mn-sp-text-right" flex="40">
-                    <nav class="navigation js-nav-state">
-                     <!-- <h2 class="off-screen"></h2> -->
-                     <ul class="navigation-items" style="list-style-type: none;">
-                       <li class="navigation-item"><a href="#" ng-style="">Full Stack</a></li>
-                       <li class="navigation-item"><a href="#" ng-style="">Marketeering</a></li>
-                       <li class="navigation-item"><a href="#" ng-style="">About</a></li>
-                     </ul>
-                   </nav>
-                </div>
-            </div>
-        </div>
-
-    </md-toolbar>
-    <!--Note: for scrollShrink to work, the toolbar must be a sibling of a md-content element, placed before it.-->
-    <md-content>
-    <div ui-view></div>
-    </md-content>
-</div>
+    <div layout="column" layout-fill>
+        <dk-nav-toolbar></dk-nav-toolbar>
+        <md-content>
+            <div ui-view></div>
+        </md-content>
+    </div>
 
 
 
@@ -96,7 +70,9 @@
     <!-- build:js js/app.js -->
     <!-- inject:js -->
     <script src="/src/client/app/dkindred.module.js"></script>
+    <script src="/src/client/app/layout/layout.module.js"></script>
     <script src="/src/client/app/dkindred.config.js"></script>
+    <script src="/src/client/app/layout/dk-nav-toolbar.directive.js"></script>
     <!-- endinject -->
 
     <!-- inject:templates:js -->
@@ -104,5 +80,5 @@
     <!--endbuild -->
 
 
-  </body>
+</body>
 </html>
