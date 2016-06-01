@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" >
-  <head>
+<html lang="en">
+
+<head>
     <title>Angular Material - Starter App</title>
 
     <meta charset="utf-8">
@@ -26,6 +27,7 @@
     <link rel="stylesheet" href="/src/client/css/common.css">
     <link rel="stylesheet" href="/src/client/css/gd-tb-mn-sp.css">
     <link rel="stylesheet" href="/src/client/css/layout.css">
+    <link rel="stylesheet" href="/src/client/css/main.css">
     <link rel="stylesheet" href="/src/client/css/style.css">
     <!-- endinject -->
     <!-- endbuild -->
@@ -35,21 +37,28 @@
         /**
          * Hide when Angular is not yet loaded and initialized
          */
-        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-          display: none !important;
+
+        [ng\:cloak],
+        [ng-cloak],
+        [data-ng-cloak],
+        [x-ng-cloak],
+        .ng-cloak,
+        .x-ng-cloak {
+            display: none !important;
         }
     </style>
 
-  </head>
+</head>
 
-  <body ng-app="dkindred" layout="column" ng-cloak>
-
-    <div layout="column" layout-fill>
-        <dk-nav-toolbar></dk-nav-toolbar>
-        <md-content>
-            <div ui-view></div>
-        </md-content>
-    </div>
+<body ng-app="dkindred" ng-controller="DkindredController as vm"layout="column" ng-cloak>
+<p>
+    <a href="#/">home</a>
+</p>
+<p>
+    {{vm.stateCategory}}
+</p>
+    <dkindred-shell ng-show="vm.stateCategory"></dkindred-shell>
+    <dkworkshop-shell ng-show="!vm.stateCategory"></dkworkshop-shell>
 
 
 
@@ -70,9 +79,16 @@
     <!-- build:js js/app.js -->
     <!-- inject:js -->
     <script src="/src/client/app/dkindred.module.js"></script>
+    <script src="/src/client/app/dkcomponents/dkcomponents.module.js"></script>
+    <script src="/src/client/app/dkworkshop/dkworkshop.module.js"></script>
     <script src="/src/client/app/layout/layout.module.js"></script>
+    <script src="/src/client/app/dkworkshop/layout/dkworkshop.layout.module.js"></script>
     <script src="/src/client/app/dkindred.config.js"></script>
+    <script src="/src/client/app/dkindred.controller.js"></script>
+    <script src="/src/client/app/dkworkshop/dkworkshop.routes.js"></script>
     <script src="/src/client/app/layout/dk-nav-toolbar.directive.js"></script>
+    <script src="/src/client/app/layout/dkindred-shell.directive.js"></script>
+    <script src="/src/client/app/dkworkshop/layout/dkworkshop-shell.directive.js"></script>
     <!-- endinject -->
 
     <!-- inject:templates:js -->
@@ -81,4 +97,5 @@
 
 
 </body>
+
 </html>
