@@ -1,7 +1,10 @@
-<div layout="row">
+<div layout="row" ng-controller="DKindredController as vm" >
     <md-sidenav md-component-id="left" md-is-locked-open="$mdMedia('min-width: 272px')" class="md-sidenav-left">
 
     <header class="nav-header">
+        <p>
+            <a href="#/">home</a>
+        </p>
         <a ng-href="/" class="docs-logo">
           <img src="img/icons/angular-logo.svg" alt="" />
           <h1 class="docs-logotype md-heading">DKindred Workshop</h1>
@@ -9,8 +12,10 @@
       </header>
 
     <md-content>
-    Left Menu
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        <!-- <p>
+            {{vm.sections}}
+        </p> -->
+        <menu-toggle section="vm.section"></menu-toggle>
     </md-content>
 
     </md-sidenav>
@@ -29,16 +34,12 @@
 
     <md-content md-scroll-y layout="column" flex>
       <div layout-padding flex="noshrink">
-          view information goes here
-
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    <div ui-view> </div>
       </div>
 
       <div layout="row" flex="noshrink" layout-align="center center">
         <div id="license-footer" flex>
-        <div ui-view></div>
+
         </div>
       </div>
     </md-content>

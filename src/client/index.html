@@ -51,12 +51,8 @@
 </head>
 
 <body ng-app="dkindred" ng-controller="DkindredController as vm"layout="column" ng-cloak>
-<p>
-    <a href="#/">home</a>
-</p>
-<p>
-    {{vm.stateCategory}}
-</p>
+
+
     <dkindred-shell ng-show="vm.stateCategory"></dkindred-shell>
     <dkworkshop-shell ng-show="!vm.stateCategory"></dkworkshop-shell>
 
@@ -86,6 +82,7 @@
     <script src="/src/client/app/dkindred.config.js"></script>
     <script src="/src/client/app/dkindred.controller.js"></script>
     <script src="/src/client/app/dkworkshop/dkworkshop.routes.js"></script>
+    <script src="/src/client/app/dkworkshop/menu.factory.js"></script>
     <script src="/src/client/app/layout/dk-nav-toolbar.directive.js"></script>
     <script src="/src/client/app/layout/dkindred-shell.directive.js"></script>
     <script src="/src/client/app/dkworkshop/layout/dkworkshop-shell.directive.js"></script>

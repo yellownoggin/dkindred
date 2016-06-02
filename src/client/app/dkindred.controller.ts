@@ -1,4 +1,7 @@
-// TODO:  better naming convention more suitable or relevant to the task and maybe in a core module(suitable module)
+// TODO:
+// better naming convention more suitable or relevant to the task and maybe in a core module(suitable module)
+// check the timeout approach using stack overflow first[code check]
+// need a group to work with code checks code reviews
 
 namespace dkindred {
     'use strict';
