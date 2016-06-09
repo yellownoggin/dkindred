@@ -1,5 +1,15 @@
-<md-button
+<!-- <md-button
     ng-href="{{section.url}}">
   {{section.name}}
+</md-button> -->
 
+<md-button
+    ng-class="{'active' : isSelected()}"
+    ng-href="{{section.url}}"
+    ng-click="focusSection()">
+  {{section.name}} 
+  <span class="_md-visually-hidden"
+    ng-if="isSelected()">
+    current page
+  </span>
 </md-button>

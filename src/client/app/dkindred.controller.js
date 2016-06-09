@@ -28,7 +28,7 @@ var dkindred;
                 console.log(toState.name.indexOf('-ws'));
                 var n = toState.name.indexOf('-ws');
                 if (n > 0) {
-                    console.log(_this.stateCategory, 'get proper show');
+                    console.log(_this.stateCategory, 'get proper show  shange state');
                     _this.stateCategory = false;
                 }
                 else {

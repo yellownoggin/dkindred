@@ -3,33 +3,39 @@ var dkindred;
     'use strict';
     var MenuFactory = (function () {
         function MenuFactory() {
+            this.sections = [];
+            this.getSections();
+            console.log(this.sections);
         }
+        MenuFactory.prototype.selectSection = function (section) {
+            this.openedSection = section;
+        };
+        MenuFactory.prototype.toggleSelectSection = function (section) {
+            this.openedSection = (this.openedSection === section ? null : section);
+        };
+        MenuFactory.prototype.isSectionSelected = function (section) {
+            return this.openedSection === section;
+        };
+        MenuFactory.prototype.selectPage = function (section, page) {
+            this.currentPage = page;
+            this.currentSection = section;
+        };
+        MenuFactory.prototype.isPageSelected = function (page) {
+            return this.currentPage === page;
+        };
         MenuFactory.prototype.getSections = function () {
-            var sections = [];
-            sections = [
-                {
-                    name: 'WS Components',
-                    type: 'toggle',
-                    pages: [
-                        {
-                            name: 'WS Component 1',
-                            id: 'wsc1',
-                            url: '#/dkworkshop/1'
-                        },
-                        {
-                            name: 'WS Component 2',
-                            id: 'wsc2',
-                            url: '#/dkworkshop/2'
-                        },
-                        {
-                            name: 'WS Component 3',
-                            id: 'wsc3',
-                            url: '#/dkworkshop/3'
-                        }
-                    ]
-                }
-            ];
-            return sections;
+            this.sections.push({
+                name: 'Workshop Components',
+                type: 'heading',
+                children: [
+                    {
+                        name: 'Main Toolbars',
+                        type: 'link',
+                        id: 'main-toolbars',
+                        url: '#/dkworkshop/angular-material-main-toolbar'
+                    }
+                ]
+            });
         };
         return MenuFactory;
     }());

@@ -8,16 +8,26 @@ var dkworkshop;
         $stateProvider
             .state('dkworkshop-ws', {
             url: '/dkworkshop',
-            templateUrl: '/app/dkworkshop/partials/dkworkshop-home.html'
+            views: {
+                "contentShell": {
+                    templateUrl: '/app/dkworkshop/partials/dkworkshop-content-shell.html'
+                },
+                "content": {
+                    templateUrl: '/app/dkworkshop/partials/dkworkshop-home.html'
+                }
+            }
         })
             .state('dkworkshop-ws-components', {
             url: '/dkworkshop/:tmpl',
-            templateUrl: function (params) {
-                var url = '/app/dkworkshop/partials/workshop-component-' + params.tmpl + '.html';
-                console.log(url);
-                100;
-                return url;
+            views: {
+                "contentShell": {
+                    templateUrl: '/app/dkworkshop/partials/dkworkshop-content-shell.html'
+                },
+                "content": {
+                    templateUrl: '/app/dkworkshop/contents/angular-material-main-toolbar/angular-material-main-toolbar-demo.html'
+                }
             }
         });
     }
+    ;
 })(dkworkshop || (dkworkshop = {}));

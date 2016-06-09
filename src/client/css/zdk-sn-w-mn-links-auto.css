@@ -1,0 +1,61 @@
+/*NOTE: starts with zin order to over ride style.css which is the stylesheet taken from angular material*/
+
+/*Grey
+500 #9E9E9E
+50#FAFAFA
+100#F5F5F5
+200#EEEEEE
+300#E0E0E0
+400#BDBDBD
+500#9E9E9E
+600#757575
+700#616161
+800#424242
+900#212121
+*/
+
+
+/*Workshop*/
+
+/*index html*/
+/**
+ * Height issue: fix
+ * Makes the shell directive fit the height of the page
+ */
+.shell-body {
+    overflow: hidden;
+    max-width: 100%;
+    height: 100%;
+}
+
+.fill-height{}
+/* end of index css */
+
+
+
+/*workshop main layout*/
+.site-sidenav {
+     background: #BDBDBD;
+     height: 100%;
+}
+
+ul li {
+    overflow-x: hidden;
+}
+.nav-header {
+    background: #9E9E9E;
+    border-bottom: 1px solid #616161;
+}
+
+/*md-content*/
+
+.dkworkshop-menu > li {
+    border-bottom: 1px solid #616161;
+}
+.dkworkshop-menu > li {
+    margin: 0;
+}
+
+.dkworkshop-menu .md-button.active {
+    background: #267ED5;
+}

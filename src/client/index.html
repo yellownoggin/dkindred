@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="/src/client/css/layout.css">
     <link rel="stylesheet" href="/src/client/css/main.css">
     <link rel="stylesheet" href="/src/client/css/style.css">
+    <link rel="stylesheet" href="/src/client/css/zdk-sn-w-mn-links-auto.css">
     <!-- endinject -->
     <!-- endbuild -->
 
@@ -54,7 +55,7 @@
 
 
     <dkindred-shell ng-show="vm.stateCategory"></dkindred-shell>
-    <dkworkshop-shell ng-show="!vm.stateCategory"></dkworkshop-shell>
+    <dkworkshop-shell class="shell-body" ng-show="!vm.stateCategory"></dkworkshop-shell>
 
 
 
@@ -75,13 +76,13 @@
     <!-- build:js js/app.js -->
     <!-- inject:js -->
     <script src="/src/client/app/dkindred.module.js"></script>
-    <script src="/src/client/app/dkcomponents/dkcomponents.module.js"></script>
     <script src="/src/client/app/dkworkshop/dkworkshop.module.js"></script>
     <script src="/src/client/app/layout/layout.module.js"></script>
     <script src="/src/client/app/dkworkshop/layout/dkworkshop.layout.module.js"></script>
     <script src="/src/client/app/dkindred.config.js"></script>
     <script src="/src/client/app/dkindred.controller.js"></script>
     <script src="/src/client/app/dkworkshop/dkworkshop.routes.js"></script>
+    <script src="/src/client/app/dkworkshop/menu-link-directive.js"></script>
     <script src="/src/client/app/dkworkshop/menu.factory.js"></script>
     <script src="/src/client/app/layout/dk-nav-toolbar.directive.js"></script>
     <script src="/src/client/app/layout/dkindred-shell.directive.js"></script>

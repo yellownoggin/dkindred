@@ -1,47 +1,83 @@
-<div layout="row" ng-controller="DKindredController as vm" >
-    <md-sidenav md-component-id="left" md-is-locked-open="$mdMedia('min-width: 272px')" class="md-sidenav-left">
+<div layout="row" layout-fill ng-controller="DWKindredController as vm">
 
-    <header class="nav-header">
-        <p>
-            <a href="#/">home</a>
-        </p>
-        <a ng-href="/" class="docs-logo">
-          <img src="img/icons/angular-logo.svg" alt="" />
-          <h1 class="docs-logotype md-heading">DKindred Workshop</h1>
-        </a>
-      </header>
+    <md-sidenav md-component-id="left" md-is-locked-open="$mdMedia('min-width: 272px')" class="site-sidenav md-sidenav-left">
 
-    <md-content>
-        <!-- <p>
-            {{vm.sections}}
-        </p> -->
-        <menu-toggle section="vm.section"></menu-toggle>
-    </md-content>
+        <header class="nav-header">
+            <p>
+                <a href="#/">home</a>
+            </p>
+            <a ng-href="/" class="docs-logo">
+                <img src="img/icons/angular-logo.svg" alt="" />
+                <h1 class="docs-logotype md-heading">DKindred Workshop</h1>
+            </a>
+        </header>
+
+        <md-content>
+            <ul class="dkworkshop-menu">
+                <li ng-repeat="section in vm.sections">
+
+                    <h2 class="menu-heading md-subhead" ng-if="section.type === 'heading'" id="heading_{{ section.name | nospace }}">
+                    {{section.name}}
+                    </h2>
+
+                    <!--
+                     <menu-link section="section" ng-if="section.type === 'link' && !section.hidden"></menu-link>
+
+                    <menu-toggle section="vm.section" ng-if="section.type === 'toggle' && !section.hidden">></menu-toggle>
+                     -->
+                    <ul ng-if="section.children" class="menu-nested-list">
+                        <li ng-repeat="child in section.children" >
+                        <!-- <li ng-repeat="child in section.children" ng-class="{'childActive' : isSectionSelected(child)}"> -->
+                            <menu-link section="child" ng-if="child.type === 'link'"></menu-link>
+
+                            <menu-toggle section="child" ng-if="child.type === 'toggle'"></menu-toggle>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </md-content>
 
     </md-sidenav>
 
 
-<div layout="column" tabIndex="-1" role="main" flex>
-  <md-toolbar class="md-whiteframe-glow-z1 site-content-toolbar">
-      <div class="md-toolbar-tools docs-toolbar-tools" tabIndex="-1">
-          <!-- TODO:  hamburger button -->
-          <!-- TODO:  layout row with section title information -->
-          <span flex></span> <!-- use up the empty space -->
-          <!-- TODO:  right side menu information -->
-      </div>
-  </md-toolbar>
 
 
-    <md-content md-scroll-y layout="column" flex>
-      <div layout-padding flex="noshrink">
-    <div ui-view> </div>
-      </div>
+    <div layout="column" tabIndex="-1" role="main" flex>
+        <md-toolbar class="md-whiteframe-glow-z1 site-content-toolbar">
+            <div class="md-toolbar-tools docs-toolbar-tools" tabIndex="-1">
+                <!-- TODO:  hamburger button -->
+                <!-- TODO:  layout row with section title information -->
+                <div layout="row" flex class="fill-height">
+                    <h2>
+                        <img src="https://placehold.it/150x40?text=left+side" alt="" />
+                        <!-- <span class="md-breadcrumb-page">{{vm.menu.currentPage}}</span> -->
+                    </h2>
+                </div>
 
-      <div layout="row" flex="noshrink" layout-align="center center">
-        <div id="license-footer" flex>
+                <span flex></span>
+                <!-- use up the empty space -->
+                <!-- use up the empty space -->
+                <!-- TODO:  right side menu information -->
 
-        </div>
-      </div>
-    </md-content>
-  </div>
+                <div class="md-toolbar-item docs-tools" layout="row">
+                    <img src="https://placehold.it/150x40?text=rightside" alt="" />
+                </div>
+            </div>
+        </md-toolbar>
+
+
+        <md-content md-scroll-y layout="column" flex>
+            <div layout-padding flex="noshrink">
+                <div ui-view="contentShell"></div>
+                <div ui-view="content">
+                </div>
+            </div>
+
+            <div layout="row" flex="noshrink" layout-align="center center">
+                <div id="license-footer" flex>
+
+                </div>
+            </div>
+        </md-content>
+    </div>
 </div>

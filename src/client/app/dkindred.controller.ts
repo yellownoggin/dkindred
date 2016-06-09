@@ -38,7 +38,7 @@ namespace dkindred {
                     console.log(toState.name.indexOf('-ws'));
                     var n: number = toState.name.indexOf('-ws');
                     if (n > 0) {
-                        console.log(this.stateCategory, 'get proper show');
+                        console.log(this.stateCategory, 'get proper show  shange state');
                         this.stateCategory = false;
 
                     } else {

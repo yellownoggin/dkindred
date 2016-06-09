@@ -10,7 +10,11 @@ var dkindred;
         $stateProvider
             .state('home', {
             url: '/',
-            templateUrl: '/app/general-content/partials/home.html'
+            views: {
+                "dkContentShell": {
+                    templateUrl: '/app/general-content/partials/home.html'
+                }
+            }
         });
     }
     function initTheme($mdThemingProvider) {
