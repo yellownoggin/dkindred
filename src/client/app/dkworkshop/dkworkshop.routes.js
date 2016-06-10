@@ -20,14 +20,14 @@ var dkworkshop;
             .state('dkworkshop-ws-components', {
             url: '/dkworkshop/:tmpl',
             views: {
-                "contentShell": {
-                    templateUrl: '/app/dkworkshop/partials/dkworkshop-content-shell.html'
-                },
                 "content": {
-                    templateUrl: '/app/dkworkshop/contents/angular-material-main-toolbar/angular-material-main-toolbar-demo.html'
+                    templateUrl: function (params) {
+                        var url = '/app/dkworkshop/contents/' + params.tmpl + '/' + params.tmpl + '-demo.html';
+                        console.log(url);
+                        return url;
+                    }
                 }
             }
         });
     }
-    ;
 })(dkworkshop || (dkworkshop = {}));

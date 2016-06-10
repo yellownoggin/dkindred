@@ -126,7 +126,7 @@
             function nospaceFilter() {
                 return (value)  => (!value) ? '' : value.replace(/ /g, '');
                 // return function (value) {
-                //     return (!value) ? '' : value.replace(/ /g, 'fred');
+                //     return (!value) ? '' : value.replace(/ /g, '');
                 // }
             }
 

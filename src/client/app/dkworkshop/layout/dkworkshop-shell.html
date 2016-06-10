@@ -2,15 +2,28 @@
 
     <md-sidenav md-component-id="left" md-is-locked-open="$mdMedia('min-width: 272px')" class="site-sidenav md-sidenav-left">
 
-        <header class="nav-header">
+        <header class="nav-header" layout="column" layout-align="center center">
+            <div class="">
+                <a ng-href="/" class="docs-logo">
+                    <md-icon style="color: #fff; font-size: 100px; height: 100px; margin-left: -50px">hdr_weak</md-icon>
+                </a>
+            </div>
+            <div class="">
+                <h1 class="docs-logotype md-heading">DKindred Workshop</h1>
+            </div>
+
+        </header>
+        <!-- <header class="nav-header">
             <p>
                 <a href="#/">home</a>
             </p>
             <a ng-href="/" class="docs-logo">
-                <img src="img/icons/angular-logo.svg" alt="" />
+                <div class="">
+                    <md-icon style="color: #fff; font-size: 100px; height: 100px;">hdr_weak</md-icon>
+                </div>
                 <h1 class="docs-logotype md-heading">DKindred Workshop</h1>
             </a>
-        </header>
+        </header> -->
 
         <md-content>
             <ul class="dkworkshop-menu">
@@ -26,8 +39,8 @@
                     <menu-toggle section="vm.section" ng-if="section.type === 'toggle' && !section.hidden">></menu-toggle>
                      -->
                     <ul ng-if="section.children" class="menu-nested-list">
-                        <li ng-repeat="child in section.children" >
-                        <!-- <li ng-repeat="child in section.children" ng-class="{'childActive' : isSectionSelected(child)}"> -->
+                        <li ng-repeat="child in section.children">
+                            <!-- <li ng-repeat="child in section.children" ng-class="{'childActive' : isSectionSelected(child)}"> -->
                             <menu-link section="child" ng-if="child.type === 'link'"></menu-link>
 
                             <menu-toggle section="child" ng-if="child.type === 'toggle'"></menu-toggle>
@@ -67,12 +80,7 @@
 
 
         <md-content md-scroll-y layout="column" flex>
-            <div layout-padding flex="noshrink">
-                <div ui-view="contentShell"></div>
-                <div ui-view="content">
-                </div>
-            </div>
-
+            <div ui-view="content"></div>
             <div layout="row" flex="noshrink" layout-align="center center">
                 <div id="license-footer" flex>
 
