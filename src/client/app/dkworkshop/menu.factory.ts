@@ -45,7 +45,19 @@ namespace dkindred {
                         url: '#/dkworkshop/angular-material-main-toolbar'
                     }
                     ]
-                }
+                },
+                {
+                    name: 'Workshop Templates',
+                    type: 'heading',
+                    children: [
+                        {
+                            name: 'vCard Tripwire Mag ',
+                            type: 'link',
+                            id: 'site-templates',
+                            url: '#/dkworkshop/templates/vcard-tripwiremag'
+                        }
+                        ]
+                    }
             );
                 // {
                 //     name: 'WS Components',

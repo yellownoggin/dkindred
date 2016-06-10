@@ -1,7 +1,21 @@
     namespace dkworkshop {
         'use strict';
 
+        function demosContainerDirective(): angular.IDirective {
+            return {
+                scope: {
+                    title: '=',
+                    meta: '='
+                },
+                templateUrl: '/app/dkworkshop/demos-container/demos-container.tmpl.html',
+                transclude: true
+                // link: linkFn
+            }
 
+            // function linkFn($scope) {
+            //
+            // }
+        }
             function MenuToggleDirective($timeout): angular.IDirective {
                 return {
                     scope: {
@@ -132,6 +146,7 @@
 
             angular
                 .module('dkworkshop', ['ngMaterial', 'ui.router', 'dkworkshop.layout'])
+                .directive('demosContainer', demosContainerDirective)
                 .directive('menuToggle', MenuToggleDirective)
                 .directive('menuLink', MenuLinkDirective)
                 .filter('nospace', nospaceFilter)

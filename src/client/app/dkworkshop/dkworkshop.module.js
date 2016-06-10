@@ -1,6 +1,16 @@
 var dkworkshop;
 (function (dkworkshop) {
     'use strict';
+    function demosContainerDirective() {
+        return {
+            scope: {
+                title: '=',
+                meta: '='
+            },
+            templateUrl: '/app/dkworkshop/demos-container/demos-container.tmpl.html',
+            transclude: true
+        };
+    }
     function MenuToggleDirective($timeout) {
         return {
             scope: {
@@ -70,6 +80,7 @@ var dkworkshop;
     }
     angular
         .module('dkworkshop', ['ngMaterial', 'ui.router', 'dkworkshop.layout'])
+        .directive('demosContainer', demosContainerDirective)
         .directive('menuToggle', MenuToggleDirective)
         .directive('menuLink', MenuLinkDirective)
         .filter('nospace', nospaceFilter)

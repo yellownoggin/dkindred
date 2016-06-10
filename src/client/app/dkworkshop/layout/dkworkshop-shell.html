@@ -52,11 +52,6 @@
 
     </md-sidenav>
 
-
-<p>
-    testing the local merge process with git
-</p>
-
     <div layout="column" tabIndex="-1" role="main" flex>
         <md-toolbar class="md-whiteframe-glow-z1 site-content-toolbar">
             <div class="md-toolbar-tools docs-toolbar-tools" tabIndex="-1">
@@ -81,8 +76,9 @@
         </md-toolbar>
 
 
-        <md-content md-scroll-y layout="column" flex>
-            <div ui-view="content"></div>
+        <md-content md-scroll-y layout="column" layout-padding flex>
+            <div ui-view="content" class="workshop-content">
+            </div>
             <div layout="row" flex="noshrink" layout-align="center center">
                 <div id="license-footer" flex></div>
             </div>

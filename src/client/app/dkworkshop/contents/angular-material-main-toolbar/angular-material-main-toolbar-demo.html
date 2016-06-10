@@ -1,1 +1,51 @@
-testing main toolbar
+<demos-container title="'Main Toolbar - Mock Basic'" meta="'Main toolbar essentially for quick mockup purposes. Showing essential/basic markup pattern. Uses include: top page navigations, meta-information, or components action interface.'">
+    <md-toolbar class="md-whiteframe-glow-z1" style="background: #f6f6f6; height: 64px;">
+        <div class="docs-toolbar-tools" layout="row" layout-align="center center" layout-fill>
+            <div class="" style="height: 35px; padding: 3px 5px; background: rgba(0, 0, 0, 0.065); color: #106CC8; font-size: 20px">
+                <div class="" style="text-align: center;">
+                    Logo/Breadcrumb
+                </div>
+            </div>
+            <span flex></span>
+            <div  style="height: 35px; padding: 3px 5px; background: rgba(0, 0, 0, 0.065); color: #106CC8; font-size: 20px">
+
+                <div class="" style="text-align: center;">
+                    Nav Links/Other Tools
+                </div>
+
+            </div>
+        </div>
+
+    </md-toolbar>
+</demos-container>
+
+<demos-container title="'Main Toolbar - Logo & Inline Nav'" meta="'Main toolbar with simple logo & in-line navigation'">
+    <md-toolbar class="light" md-scroll-shrink md-shrink-speed-factor="0.5">
+        <div class="site-width">
+            <div layout="row" layout-align="start center" class="gd-tb-mn-sp">
+                <div class="site-title" flex class="navigation-text-left">
+                    <!-- TODO: Needs to be cleaned/diciphered -->
+                    <h1>
+                        <a href="#" class="gd-site-title-link-small">
+                            <span>D</span>
+                            <span class="_dot">&#183;</span>
+                            <span>Kindred</span>
+                            <span><md-icon>hdr_weak</md-icon></span>
+                        </a>
+                    </h1>
+                </div>
+                <div class="gd-tb-mn-sp-separator"></div>
+                <div class="gd-tb-mn-sp-text-right" flex>
+                    <nav class="navigation js-nav-state">
+                        <!-- <h2 class="off-screen"></h2> -->
+                        <ul class="navigation-items" style="list-style-type: none;">
+                            <li ng-repeat="i in ['Full Stack', 'Marketeering', 'About']" class="navigation-item"><a href="#" ng-style="">{{i}}</a></li>
+
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </md-toolbar>
+
+</demos-container>

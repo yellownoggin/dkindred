@@ -29,13 +29,22 @@ namespace dkworkshop {
             .state('dkworkshop-ws-components', {
                 url: '/dkworkshop/:tmpl',
                 views: {
-                    // "contentShell": {
-                    //     templateUrl: '/app/dkworkshop/partials/dkworkshop-content-shell.html'
-                    // },
                     "content": {
-                        // templateUrl: '/app/dkworkshop/contents/angular-material-main-toolbar/angular-material-main-toolbar-demo.html'
-                        templateUrl: function (params: angular.ui.IStateParamsService): string {
-                            var url: string = '/app/dkworkshop/contents/' + params.tmpl + '/' + params.tmpl +  '-demo.html';
+                        templateUrl: function(params: angular.ui.IStateParamsService): string {
+                            var url: string = '/app/dkworkshop/contents/' + params.tmpl + '/' + params.tmpl + '-demo.html';
+                            console.log(url);
+                            return url;
+                        }
+                    }
+                }
+
+            })
+            .state('dkworkshop-ws-templates', {
+                url: '/dkworkshop/templates/:tmpl',
+                views: {
+                    "content": {
+                        templateUrl: function(params: angular.ui.IStateParamsService): string {
+                            var url: string = '/app/dkworkshop/templates/' + params.tmpl + '/' + params.tmpl + '.tmpl.html';
                             console.log(url);
                             return url;
                         }
@@ -43,7 +52,7 @@ namespace dkworkshop {
                 }
 
             });
-        }
+    }
 
 
 }
