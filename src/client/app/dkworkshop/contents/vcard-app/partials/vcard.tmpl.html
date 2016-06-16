@@ -1,0 +1,53 @@
+<div layout="column" class="body-placeholder-vc" layout-fill>
+    <section id="container-vc">
+        <!-- social media icons row -->
+        <div layout="column" layout-fill>
+            <md-toolbar class="social-media-toolbar-vc" md-scroll-shrink md-shrink-speed-factor="0.5">
+                <div layout="row" class="social-media-vc" layout-align="end middle">
+                    <md-button class="social-media-buttons-vc" href="#" ng-disabled="false" aria-label="description" md-no-ink="false" md-ripple-size="full"><i class="fa fa-google-plus" aria-hidden="true"></i></md-button>
+                    <md-button class="social-media-buttons-vc" href="#/dkpagetemplates" ng-disabled="false" aria-label="description" md-no-ink="false" md-ripple-size="full"><i class="fa fa-linkedin" aria-hidden="true"></i></md-button>
+                    <md-button class="social-media-buttons-vc" href="#/dkpagetemplates" ng-disabled="false" aria-label="description" md-no-ink="false" md-ripple-size="full"><i class="fa fa-twitter" aria-hidden="true"></i></md-button>
+
+                </div>
+            </md-toolbar>
+            <!-- end social media icons row -->
+
+            <!-- main/home content page -->
+            <div ui-view="cardTop" class="our_content"></div>
+            <!--end main/home content page -->
+            
+            <!-- navigation row -->
+            <md-content class="md-whiteframe-glow-z1">
+                <div>
+                    <div layout="row" class="card-middle-vc" layout-align="center center">
+                        <md-button ui-sref="dkworkshop-ws-vcard.home">
+                            <md-icon class="card-middle-icons-vc" aria-div="Menu">person</md-icon>
+                            <div class="icons-caption">Home</div>
+                        </md-button>
+                        <md-button ui-sref="dkworkshop-ws-vcard.portfolio">
+                            <md-icon class="card-middle-icons-vc" aria-div="Menu">widgets</md-icon>
+                            <div class="icons-caption">Portfolio</div>
+                        </md-button>
+                        <md-button ui-sref="dkworkshop-ws-vcard.resume">
+                            <md-icon class="card-middle-icons-vc" aria-div="Menu">business_center</md-icon>
+                            <div class="icons-caption">Resume</div>
+                        </md-button>
+                        <md-button ui-sref="dkworkshop-ws-vcard.blog">
+                            <md-icon class="card-middle-icons-vc" aria-div="Menu">hdr_weak</md-icon>
+                            <div class="icons-caption">Blog</div>
+                        </md-button>
+                        <md-button ui-sref="dkworkshop-ws-vcard.contact">
+                            <md-icon class="card-middle-icons-vc" aria-div="Menu">mail_outline</md-icon>
+                            <div class="icons-caption">Contact</div>
+                        </md-button>
+
+                    </div>
+                </div>
+            </md-content>
+            <!-- end navigation row -->
+            <!-- sub pages content -->
+            <div ui-view="cardBottom" class="card-bottom-view our_content"></div>
+            <!-- end sub pages content -->
+        </div>
+    </section>
+</div>

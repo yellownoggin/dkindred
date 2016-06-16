@@ -1,8 +1,9 @@
 <div layout="row" layout-fill ng-controller="DWKindredController as vm">
-
-    <md-sidenav md-component-id="left" md-is-locked-open="$mdMedia('min-width: 272px')" class="site-sidenav md-sidenav-left">
+    <!-- TODO:  864px issue- & locked open limitations to toggle full screen see toggle md button in toolbar main content area -->
+    <md-sidenav md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')" class="site-sidenav md-sidenav-left">
 
         <header class="nav-header" layout="column" layout-align="center center">
+
             <div class="">
                 <a ng-href="/" class="docs-logo">
                     <md-icon style="color: #fff; font-size: 100px; height: 100px; margin-left: -50px">hdr_weak</md-icon>
@@ -56,12 +57,14 @@
         <md-toolbar class="md-whiteframe-glow-z1 site-content-toolbar">
             <div class="md-toolbar-tools docs-toolbar-tools" tabIndex="-1">
                 <!-- TODO:  hamburger button -->
+                <md-button class="md-icon-button" ng-click="vm.toggleLeftMenu()" hide-gt-sm aria-label="Toggle Menu">
+                    <md-icon>menu</md-icon>
+                </md-button>
+
                 <!-- TODO:  layout row with section title information -->
                 <div layout="row" flex class="fill-height">
-                    <h2>
-                        <img src="https://placehold.it/150x40?text=left+side" alt="" />
-                        <!-- <span class="md-breadcrumb-page">{{vm.menu.currentPage}}</span> -->
-                    </h2>
+                    <md-button class="md-fab"  ng-click="vm.toggleLeftMenu()" ng-disabled="false" aria-label="Toggle Left Menu" md-no-ink="true" md-ripple-size="full">Toggle</md-button>
+                    <a href="#/dkpagetemplates/tripwiremag">tripwire magazine</a>
                 </div>
 
                 <span flex></span>

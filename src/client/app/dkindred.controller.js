@@ -6,16 +6,32 @@ var dkindred;
             this.state = state;
             this.timeout = timeout;
             this.rootScope = rootScope;
-            this.getProperShellDelay();
             this.changeToProperShell();
         }
         DkindredController.prototype.getProperShell = function (state) {
             if (state.includes('dkworkshop-ws')) {
-                console.log(this.stateCategory, 'get proper show');
-                this.stateCategory = false;
+                console.log(this.usePageTemplatesShell, 'templates');
+                console.log(this.useWorkshopShell, 'workshop');
+                console.log(this.useDKindredShell, 'd kindred');
+                this.useDKindredShell = false;
+                this.usePageTemplatesShell = true;
+                this.useWorkshopShell = true;
+            }
+            else if (state.includes('dkpagetemplates')) {
+                console.log(this.usePageTemplatesShell, 'templates');
+                console.log(this.useWorkshopShell, 'workshop');
+                console.log(this.useDKindredShell, 'd kindred');
+                this.useWorkshopShell = false;
+                this.useDKindredShell = false;
+                this.usePageTemplatesShell = true;
             }
             else {
-                this.stateCategory = true;
+                console.log(this.usePageTemplatesShell, 'templates');
+                console.log(this.useWorkshopShell, 'workshop');
+                console.log(this.useDKindredShell, 'd kindred');
+                this.usePageTemplatesShell = false;
+                this.useWorkshopShell = false;
+                this.useDKindredShell = true;
             }
         };
         DkindredController.prototype.getProperShellDelay = function () {
@@ -27,12 +43,21 @@ var dkindred;
             this.rootScope.$on('$stateChangeStart', function (event, toState) {
                 console.log(toState.name.indexOf('-ws'));
                 var n = toState.name.indexOf('-ws');
+                var i = toState.name.indexOf('pagetemplates');
                 if (n > 0) {
-                    console.log(_this.stateCategory, 'get proper show  shange state');
-                    _this.stateCategory = false;
+                    _this.useDKindredShell = false;
+                    _this.usePageTemplatesShell = false;
+                    _this.useWorkshopShell = true;
+                }
+                else if (i > 0) {
+                    _this.useDKindredShell = false;
+                    _this.useWorkshopShell = false;
+                    _this.usePageTemplatesShell = true;
                 }
                 else {
-                    _this.stateCategory = true;
+                    _this.useWorkshopShell = false;
+                    _this.usePageTemplatesShell = false;
+                    _this.useDKindredShell = true;
                 }
             });
         };

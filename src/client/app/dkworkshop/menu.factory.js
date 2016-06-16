@@ -46,6 +46,17 @@ var dkindred;
                         url: '#/dkworkshop/templates/vcard-tripwiremag'
                     }
                 ]
+            }, {
+                name: 'Workshop Apps',
+                type: 'heading',
+                children: [
+                    {
+                        name: 'vCard App',
+                        type: 'link',
+                        id: 'site-templates',
+                        url: '#/dkworkshop/apps/vcard/home'
+                    }
+                ]
             });
         };
         return MenuFactory;

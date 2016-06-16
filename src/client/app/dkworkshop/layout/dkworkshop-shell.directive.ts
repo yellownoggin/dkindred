@@ -7,7 +7,6 @@ namespace dkworkshop {
             return {
                 restrict: 'EA',
                 templateUrl: '/app/dkworkshop/layout/dkworkshop-shell.html'
-
             }
         }
 

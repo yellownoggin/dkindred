@@ -9,25 +9,53 @@ namespace dkindred {
     class DkindredController {
         static $inject: Array<string> = ['$state', '$timeout', '$rootScope'];
 
-        stateCategory: boolean;
+        useDKindredShell: boolean;
+        usePageTemplatesShell: boolean;
+        useWorkshopShell: boolean;
 
         constructor(public state: angular.ui.IStateService, public timeout: angular.ITimeoutService, private rootScope: angular.IRootScopeService) {
 
-            this.getProperShellDelay();
+
+            // TODO: t this alpine notebehavior this would not read the url arguments go back to the beginning. Why did I originally put this in I thought that if you put the link in the browser it would not alter the proper shell directive
+            // this.getProperShellDelay();
             this.changeToProperShell();
         }
 
 
         public getProperShell(state: angular.ui.IStateService) {
             if (state.includes('dkworkshop-ws')) {
-                console.log(this.stateCategory, 'get proper show');
-                this.stateCategory = false;
+                // console.log(this.stateCategory, 'get proper show');
+                console.log(this.usePageTemplatesShell, 'templates');
+                console.log(this.useWorkshopShell, 'workshop');
+                console.log(this.useDKindredShell, 'd kindred');
+
+                this.useDKindredShell = false;
+                this.usePageTemplatesShell = true;
+                this.useWorkshopShell = true;
+
+            } else if (state.includes('dkpagetemplates')) {
+                console.log(this.usePageTemplatesShell, 'templates');
+                console.log(this.useWorkshopShell, 'workshop');
+                console.log(this.useDKindredShell, 'd kindred');
+                this.useWorkshopShell = false;
+                this.useDKindredShell = false;
+                this.usePageTemplatesShell = true;
 
             } else {
-                this.stateCategory = true;
+                console.log(this.usePageTemplatesShell, 'templates');
+                console.log(this.useWorkshopShell, 'workshop');
+                console.log(this.useDKindredShell, 'd kindred');
+
+                this.usePageTemplatesShell = false;
+                this.useWorkshopShell = false;
+                this.useDKindredShell = true;
             }
         }
-
+        // TODO: Refreshing not working
+        //  this may be the source or area to look at for the issue of refreshing going back to original state issue =>
+        // Reason: there is a slight delay before going back to the original state(home page)
+        // Conclusion: not reading state from the url
+        // may also just be a you are router/method I can add
         private getProperShellDelay() {
             this.timeout(() => this.getProperShell(this.state), 500);
         }
@@ -37,12 +65,22 @@ namespace dkindred {
                 (event: any, toState: any) => {
                     console.log(toState.name.indexOf('-ws'));
                     var n: number = toState.name.indexOf('-ws');
+                    var i: number = toState.name.indexOf('pagetemplates');
                     if (n > 0) {
-                        console.log(this.stateCategory, 'get proper show  shange state');
-                        this.stateCategory = false;
+                        // console.log(this.stateCategory, 'get proper show  shange state');
+                        this.useDKindredShell = false;
+                        this.usePageTemplatesShell = false;
+                        this.useWorkshopShell = true;
+
+                    } else if (i > 0) {
+                        this.useDKindredShell = false;
+                        this.useWorkshopShell = false;
+                        this.usePageTemplatesShell = true;
 
                     } else {
-                        this.stateCategory = true;
+                        this.useWorkshopShell = false;
+                        this.usePageTemplatesShell = false;
+                        this.useDKindredShell = true;
                     }
                 })
         }

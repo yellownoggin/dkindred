@@ -1,0 +1,35 @@
+<div layout="column" layout-fill>
+    <md-toolbar class="md-whiteframe-glow-z1" style="background: #f6f6f6; height: 64px; color: #222222; margin-bottom: 10px;" md-scroll-shrink md-shrink-speed-factor="0.5">
+        <div class="site-width">
+            <div layout="row" layout-align="end center">
+                <div class="">
+                    <md-button class="md-icon-button" aria-label="Settings">
+                        <md-icon style="color: #222222;">menu</md-icon>
+                    </md-button>
+                </div>
+                <div class="">
+                    <h2>
+               <span style="color: #222222">Kindred Templates</span>
+             </h2>
+                </div>
+
+                <div class="" flex>
+                    <nav class="navigation js-nav-state" style="text-align:right;">
+                        <!-- <h2 class="off-screen"></h2> -->
+                        <ul class="navigation-items" style="list-style-type: none;">
+                            <li class="navigation-item"><a href="#/" ng-style="" style="color: #222222;">Full Stack</a></li>
+                            <li class="navigation-item"><a href="#" ng-style="" style="color: #222222;">Marketeering</a></li>
+                            <li class="navigation-item"><a href="#/dkworkshop" ng-style="" style="color: #222222;">Workshop</a></li>
+                            <li class="navigation-item"><a href="#/dkpagetemplates" ng-style="" style="color: #222222;">Templates</a></li>
+                            <li class="navigation-item"><a href="#/dkpagetemplates/tripwiremag" ng-style="" style="color: #222222;">Tripwire Mag</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+            </div>
+        </div>
+    </md-toolbar>
+    <!--Note: for scrollShrink to work, the toolbar must be a sibling of a md-content element, placed before it.-->
+    <md-content class="layout-fill">
+        <div ui-view="content" class="layout-fill"></div>
+    </md-content>

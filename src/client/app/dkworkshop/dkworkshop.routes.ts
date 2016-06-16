@@ -38,20 +38,8 @@ namespace dkworkshop {
                     }
                 }
 
-            })
-            .state('dkworkshop-ws-templates', {
-                url: '/dkworkshop/templates/:tmpl',
-                views: {
-                    "content": {
-                        templateUrl: function(params: angular.ui.IStateParamsService): string {
-                            var url: string = '/app/dkworkshop/templates/' + params.tmpl + '/' + params.tmpl + '.tmpl.html';
-                            console.log(url);
-                            return url;
-                        }
-                    }
-                }
-
             });
+
     }
 
 

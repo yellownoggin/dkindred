@@ -57,7 +57,8 @@ var dkworkshop;
         };
     }
     var DWKindredController = (function () {
-        function DWKindredController(menu, $timeout) {
+        function DWKindredController($mdSidenav, menu, $timeout) {
+            this.$mdSidenav = $mdSidenav;
             this.menu = menu;
             this.$timeout = $timeout;
             this.autoFocusContent = false;
@@ -72,14 +73,17 @@ var dkworkshop;
         DWKindredController.prototype.isSelected = function (page) {
             return this.menu.isPageSelected(page);
         };
-        DWKindredController.$inject = ['menu', '$timeout'];
+        DWKindredController.prototype.toggleLeftMenu = function () {
+            this.$mdSidenav('left').toggle();
+        };
+        DWKindredController.$inject = ['$mdSidenav', 'menu', '$timeout'];
         return DWKindredController;
     }());
     function nospaceFilter() {
         return function (value) { return (!value) ? '' : value.replace(/ /g, ''); };
     }
     angular
-        .module('dkworkshop', ['ngMaterial', 'ui.router', 'dkworkshop.layout'])
+        .module('dkworkshop', ['ngMaterial', 'ui.router', 'dkworkshop.layout', 'dkworkshop.vcard'])
         .directive('demosContainer', demosContainerDirective)
         .directive('menuToggle', MenuToggleDirective)
         .directive('menuLink', MenuLinkDirective)

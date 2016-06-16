@@ -28,18 +28,6 @@ var dkworkshop;
                     }
                 }
             }
-        })
-            .state('dkworkshop-ws-templates', {
-            url: '/dkworkshop/templates/:tmpl',
-            views: {
-                "content": {
-                    templateUrl: function (params) {
-                        var url = '/app/dkworkshop/templates/' + params.tmpl + '/' + params.tmpl + '.tmpl.html';
-                        console.log(url);
-                        return url;
-                    }
-                }
-            }
         });
     }
 })(dkworkshop || (dkworkshop = {}));
