@@ -1,0 +1,4 @@
+"title": "Testing modularity with gulp 1",
+"category": "full-stack",
+"image": "https://placehold.it/1500x750",
+"description": "LoremLorem ipsum dolor sit amet, consectetur adipisicing elit.",

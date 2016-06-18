@@ -9,6 +9,9 @@ var fs = require('fs');
 var path = require('path');
 var port = process.env.PORT  || config.defaultPort;
 var wiredep = require('gulp-wiredep');
+//NOTE: for blog tests
+var requireDir = require('require-dir');
+var dir = requireDir('./gulp-blog-building-tasks');
 
 // TODO: things like site map an http access, README?
 

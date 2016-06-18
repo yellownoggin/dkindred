@@ -22,8 +22,6 @@
         "app/dkpagetemplates/dkpagetemplates-layout/dkpagetemplates.layout.module.ts",
         "app/dkpagetemplates/dkpagetemplates.module.ts",
         "app/dkpagetemplates/dkpagetemplates.routes.ts",
-        "app/dkworkshop/contents/vcard-app-yn/vcard-app.module.ts",
-        "app/dkworkshop/contents/vcard-app-yn/vcard-app.routes.ts",
         "app/dkworkshop/contents/vcard-app/vcard-app.module.ts",
         "app/dkworkshop/contents/vcard-app/vcard-app.routes.ts",
         "app/dkworkshop/dkworkshop.module.ts",
