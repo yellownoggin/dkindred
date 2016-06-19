@@ -5,7 +5,6 @@ var dkindred;
         function MenuFactory() {
             this.sections = [];
             this.getSections();
-            console.log(this.sections);
         }
         MenuFactory.prototype.selectSection = function (section) {
             this.openedSection = section;

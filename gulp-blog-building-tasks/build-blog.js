@@ -8,7 +8,7 @@ var moment = require('moment');
 
 gulp.task('build-blog', ['build-post'], function() {
     return gulp
-        .src(configb.blogStaging + 'all-posts/*.json')
+        .src(configb.allPosts + '*.json')
         .pipe($.concat('all-posts.json'))
         .pipe($.insert.wrap('[', ']'))
         // .pipe($.replace('},]', '}]'))
@@ -20,8 +20,8 @@ gulp.task('build-blog', ['build-post'], function() {
 gulp.task('build-post', function() {
     var fileContent = fs.readFileSync(configb.currentPost + 'blog-metadata.txt', 'utf8');
     var date = moment();
-    var today = date.format('YYYY-MM-DD');
-    log(date.format('YYYY-MM-DD'));
+    var today = date.format('YYYY-MM-DD-HH-mm-ss');
+    log(date.format('YYYY-MM-DD-HH-mm-ss'));
     //expressed according to ISO 8601(International Organization For Standardization)
     log(configb.allPosts);
     return gulp
@@ -30,6 +30,7 @@ gulp.task('build-post', function() {
         .pipe($.cleanhtml())
         .pipe($.replace('"', '\\"'))
         .pipe($.insert.prepend('"content": "'))
+        .pipe($.insert.prepend('"timestamp": "' + today + '",\n'))
         .pipe($.insert.append('"'))
         .pipe($.insert.append('\n')) //at a line break for next prepend task
         .pipe($.insert.prepend(fileContent))

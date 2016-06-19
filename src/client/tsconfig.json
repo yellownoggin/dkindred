@@ -15,6 +15,11 @@
     ],
     "compileOnSave": true,
     "files": [
+        "app/blogs/blogs-shell.directive.ts",
+        "app/blogs/blogs.controller.ts",
+        "app/blogs/blogs.module.ts",
+        "app/blogs/blogs.routes.ts",
+        "app/blogs/blogs.service.ts",
         "app/dkindred.config.ts",
         "app/dkindred.controller.ts",
         "app/dkindred.module.ts",

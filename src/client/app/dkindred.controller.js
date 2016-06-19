@@ -41,22 +41,34 @@ var dkindred;
         DkindredController.prototype.changeToProperShell = function () {
             var _this = this;
             this.rootScope.$on('$stateChangeStart', function (event, toState) {
-                console.log(toState.name.indexOf('-ws'));
+                console.log(toState.name, 'state name');
                 var n = toState.name.indexOf('-ws');
                 var i = toState.name.indexOf('pagetemplates');
+                var j = toState.name.indexOf('-blogs');
                 if (n > 0) {
                     _this.useDKindredShell = false;
                     _this.usePageTemplatesShell = false;
+                    _this.useBlogsShell = false;
                     _this.useWorkshopShell = true;
                 }
                 else if (i > 0) {
                     _this.useDKindredShell = false;
                     _this.useWorkshopShell = false;
+                    _this.useBlogsShell = false;
                     _this.usePageTemplatesShell = true;
                 }
-                else {
+                else if (j > 0) {
+                    console.log('blogs shell');
+                    _this.useDKindredShell = false;
                     _this.useWorkshopShell = false;
                     _this.usePageTemplatesShell = false;
+                    _this.useBlogsShell = true;
+                }
+                else {
+                    console.log('d kindred shell');
+                    _this.useWorkshopShell = false;
+                    _this.usePageTemplatesShell = false;
+                    _this.useBlogsShell = false;
                     _this.useDKindredShell = true;
                 }
             });

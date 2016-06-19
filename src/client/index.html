@@ -60,6 +60,7 @@
     <dkindred-shell ng-show="vm.useDKindredShell"></dkindred-shell>
     <dkworkshop-shell class="shell-body" ng-show="vm.useWorkshopShell"></dkworkshop-shell>
     <dkpagetemplates-shell class="shell-body" ng-show="vm.usePageTemplatesShell"></dkpagetemplates-shell>
+    <blogs-shell class="shell-body" ng-show="vm.useBlogsShell"></blogs-shell>
 
 
 
@@ -80,6 +81,7 @@
     <!-- build:js js/app.js -->
     <!-- inject:js -->
     <script src="/src/client/app/dkindred.module.js"></script>
+    <script src="/src/client/app/blogs/blogs.module.js"></script>
     <script src="/src/client/app/dkpagetemplates/dkpagetemplates.module.js"></script>
     <script src="/src/client/app/dkworkshop/dkworkshop.module.js"></script>
     <script src="/src/client/app/layout/layout.module.js"></script>
@@ -88,6 +90,10 @@
     <script src="/src/client/app/dkworkshop/contents/vcard-app/vcard-app.module.js"></script>
     <script src="/src/client/app/dkindred.config.js"></script>
     <script src="/src/client/app/dkindred.controller.js"></script>
+    <script src="/src/client/app/blogs/blogs-shell.directive.js"></script>
+    <script src="/src/client/app/blogs/blogs.controller.js"></script>
+    <script src="/src/client/app/blogs/blogs.routes.js"></script>
+    <script src="/src/client/app/blogs/blogs.service.js"></script>
     <script src="/src/client/app/dkpagetemplates/dkpagetemplates.routes.js"></script>
     <script src="/src/client/app/dkworkshop/dkworkshop.routes.js"></script>
     <script src="/src/client/app/dkworkshop/menu-link-directive.js"></script>

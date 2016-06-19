@@ -7,8 +7,8 @@ module.exports = function() {
     var blogs = clientApp + 'blogs/';
 
     var config = {
-        allPosts: blogStaging + 'all-posts',
-        builtBlog: blogs + 'built-blog/',
+        allPosts: blogStaging + 'all-posts/',
+        builtBlog: blogs + 'built-blog',
         currentPost: blogStaging + 'current-post/'
     };
 

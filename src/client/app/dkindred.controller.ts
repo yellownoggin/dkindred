@@ -12,6 +12,7 @@ namespace dkindred {
         useDKindredShell: boolean;
         usePageTemplatesShell: boolean;
         useWorkshopShell: boolean;
+        useBlogsShell: boolean;
 
         constructor(public state: angular.ui.IStateService, public timeout: angular.ITimeoutService, private rootScope: angular.IRootScopeService) {
 
@@ -63,23 +64,36 @@ namespace dkindred {
         private changeToProperShell() {
             this.rootScope.$on('$stateChangeStart',
                 (event: any, toState: any) => {
-                    console.log(toState.name.indexOf('-ws'));
+                    console.log(toState.name, 'state name');
                     var n: number = toState.name.indexOf('-ws');
                     var i: number = toState.name.indexOf('pagetemplates');
+                    var j: number = toState.name.indexOf('-blogs');
+
                     if (n > 0) {
                         // console.log(this.stateCategory, 'get proper show  shange state');
                         this.useDKindredShell = false;
                         this.usePageTemplatesShell = false;
+                        this.useBlogsShell = false;
                         this.useWorkshopShell = true;
 
                     } else if (i > 0) {
                         this.useDKindredShell = false;
                         this.useWorkshopShell = false;
+                        this.useBlogsShell = false;
                         this.usePageTemplatesShell = true;
 
-                    } else {
+                    } else if (j > 0) {
+                        console.log('blogs shell');
+                        this.useDKindredShell = false;
                         this.useWorkshopShell = false;
                         this.usePageTemplatesShell = false;
+                        this.useBlogsShell = true;
+
+                    } else {
+                        console.log('d kindred shell');
+                        this.useWorkshopShell = false;
+                        this.usePageTemplatesShell = false;
+                        this.useBlogsShell = false;
                         this.useDKindredShell = true;
                     }
                 })

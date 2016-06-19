@@ -13,7 +13,7 @@ namespace dkindred {
         constructor() {
             this.sections = [];
             this.getSections();
-            console.log(this.sections);
+            
         }
 
         selectSection(section) {
