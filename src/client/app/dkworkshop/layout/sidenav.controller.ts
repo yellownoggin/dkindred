@@ -7,10 +7,9 @@ namespace dkworkshop.layout {
         sidenavOpenValue: boolean;
         sidenavLockedOpenValue: boolean;
         constructor(public $mdMedia: angular.material.IMedia, public $mdSidenav: angular.material.ISidenavService) {
-            console.log($mdMedia('sm'));
-            // this.unlockedSideNavigation();
+
             this.sidenavLockedOpenValue = $mdMedia('gt-sm');
-            console.log(this.sidenavLockedOpenValue);
+
         }
 
 
@@ -18,7 +17,7 @@ namespace dkworkshop.layout {
          * toggleLeftMenu
          * Recipe for toggling locked open menu
          * fixes minor quirks when using md-is-open alone
-         * 1 being: does not right justify or honor established layout   
+         * 1 being: does not right justify or honor established layout
          */
 
         toggleLeftMenu() {

@@ -7,9 +7,7 @@ var dkworkshop;
             function SideNavWorkshop($mdMedia, $mdSidenav) {
                 this.$mdMedia = $mdMedia;
                 this.$mdSidenav = $mdSidenav;
-                console.log($mdMedia('sm'));
                 this.sidenavLockedOpenValue = $mdMedia('gt-sm');
-                console.log(this.sidenavLockedOpenValue);
             }
             SideNavWorkshop.prototype.toggleLeftMenu = function () {
                 if (this.$mdMedia('gt-sm')) {
