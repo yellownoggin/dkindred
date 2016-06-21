@@ -33,6 +33,7 @@
         "app/dkworkshop/dkworkshop.routes.ts",
         "app/dkworkshop/layout/dkworkshop-shell.directive.ts",
         "app/dkworkshop/layout/dkworkshop.layout.module.ts",
+        "app/dkworkshop/layout/sidenav.controller.ts",
         "app/dkworkshop/menu-link-directive.ts",
         "app/dkworkshop/menu.factory.ts",
         "app/layout/dk-nav-toolbar.directive.ts",

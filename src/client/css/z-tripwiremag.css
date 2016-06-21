@@ -17,7 +17,7 @@
  * Body & Container
  */
 .body-placeholder-vc {
-    background-image: url('../images/bg1-gray-grid.png');
+    background-image: url('../images/bg1-gray-grid.png') !important;
     background-color: #e8e8e8;
     background-repeat: repeat;
     background-attachment: scroll;

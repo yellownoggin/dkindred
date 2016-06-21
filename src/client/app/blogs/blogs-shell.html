@@ -1,0 +1,29 @@
+<div layout="column" ng-controller="BlogsController as bc" layout-fill>
+    <md-toolbar class="md-whiteframe-glow-z1" ng-style="{{vm.backgroundColor}}">
+        <div class="site-width">
+            <div class="docs-toolbar-tools" layout="row" layout-align="center center" layout-fill>
+                <div class="" style="height: 35px; padding: 3px 5px; background: rgba(0, 0, 0, 0.065); font-size: 20px">
+                    <div class="" ng-style="{{vm.headerTextColor}}">
+                        D &middot; Kindred <span><md-icon style="color:#fff;">hdr_weak</md-icon></span>
+                    </div>
+                </div>
+                <span flex></span>
+                <div style="height: 35px; padding: 3px 5px; background: rgba(0, 0, 0, 0.065); color: #106CC8; font-size: 20px">
+
+                    <div class="" style="text-align: center;">
+                        Nav Links/Other Tools
+                    </div>
+
+                </div>
+            </div>
+            <div layout="column" class="simple-header" ng-style="{{vm.headerTextColor}}">
+                <div class="hero-simple">
+                    <h1 class="_page-title">Blog</h1>
+                </div>
+            </div>
+        </div>
+    </md-toolbar>
+    <md-content layout-padding layout-wrap>
+        <div ui-view="content"></div>
+    </md-content>
+</div>

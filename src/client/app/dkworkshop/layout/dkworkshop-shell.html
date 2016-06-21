@@ -1,20 +1,24 @@
-<div layout="row" layout-fill ng-controller="DWKindredController as vm">
-    <!-- TODO:  864px issue- & locked open limitations to toggle full screen see toggle md button in toolbar main content area -->
-    <md-sidenav md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')" class="site-sidenav md-sidenav-left">
+<div ng-controller="DWKindredController as vm" layout-fill>
+    <div layout="row" ng-controller="SideNavWorkshopController as sn" layout-fill>
+        <!-- TODO:  864px issue- & locked open limitations to toggle full screen see toggle md button in toolbar main content area -->
 
-        <header class="nav-header" layout="column" layout-align="center center">
+        <!-- md-is-locked-open="$mdMedia('gt-sm')"  -->
+        <md-sidenav md-component-id="left" md-is-open="sn.sidenavOpenValue" md-is-locked-open="$mdMedia('gt-sm') && sn.sidenavLockedOpenValue"  class="site-sidenav md-sidenav-left">
+        <!-- <md-sidenav md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')"  class="site-sidenav md-sidenav-left"> -->
 
-            <div class="">
-                <a ng-href="/" class="docs-logo">
-                    <md-icon style="color: #fff; font-size: 100px; height: 100px; margin-left: -50px">hdr_weak</md-icon>
-                </a>
-            </div>
-            <div class="">
-                <h1 class="docs-logotype md-heading">DKindred Workshop</h1>
-            </div>
+            <header class="nav-header" layout="column" layout-align="center center">
 
-        </header>
-        <!-- <header class="nav-header">
+                <div class="">
+                    <a ng-href="/" class="docs-logo">
+                        <md-icon style="color: #fff; font-size: 100px; height: 100px; margin-left: -50px">hdr_weak</md-icon>
+                    </a>
+                </div>
+                <div class="">
+                    <h1 class="docs-logotype md-heading">DKindred Workshop</h1>
+                </div>
+
+            </header>
+            <!-- <header class="nav-header">
             <p>
                 <a href="#/">home</a>
             </p>
@@ -26,65 +30,66 @@
             </a>
         </header> -->
 
-        <md-content>
-            <ul class="dkworkshop-menu">
-                <li ng-repeat="section in vm.sections">
+            <md-content>
+                <ul class="dkworkshop-menu">
+                    <li ng-repeat="section in vm.sections">
 
-                    <h2 class="menu-heading md-subhead" ng-if="section.type === 'heading'" id="heading_{{ section.name | nospace }}">
+                        <h2 class="menu-heading md-subhead" ng-if="section.type === 'heading'" id="heading_{{ section.name | nospace }}">
                     {{section.name}}
                     </h2>
 
-                    <!--
+                        <!--
                      <menu-link section="section" ng-if="section.type === 'link' && !section.hidden"></menu-link>
 
                     <menu-toggle section="vm.section" ng-if="section.type === 'toggle' && !section.hidden">></menu-toggle>
                      -->
-                    <ul ng-if="section.children" class="menu-nested-list">
-                        <li ng-repeat="child in section.children">
-                            <!-- <li ng-repeat="child in section.children" ng-class="{'childActive' : isSectionSelected(child)}"> -->
-                            <menu-link section="child" ng-if="child.type === 'link'"></menu-link>
+                        <ul ng-if="section.children" class="menu-nested-list">
+                            <li ng-repeat="child in section.children">
+                                <!-- <li ng-repeat="child in section.children" ng-class="{'childActive' : isSectionSelected(child)}"> -->
+                                <menu-link section="child" ng-if="child.type === 'link'"></menu-link>
 
-                            <menu-toggle section="child" ng-if="child.type === 'toggle'"></menu-toggle>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </md-content>
+                                <menu-toggle section="child" ng-if="child.type === 'toggle'"></menu-toggle>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </md-content>
 
-    </md-sidenav>
+        </md-sidenav>
 
-    <div layout="column" tabIndex="-1" role="main" flex>
-        <md-toolbar class="md-whiteframe-glow-z1 site-content-toolbar">
-            <div class="md-toolbar-tools docs-toolbar-tools" tabIndex="-1">
-                <!-- TODO:  hamburger button -->
-                <md-button class="md-icon-button" ng-click="vm.toggleLeftMenu()" hide-gt-sm aria-label="Toggle Menu">
-                    <md-icon>menu</md-icon>
-                </md-button>
+        <div layout="column" tabIndex="-1" role="main" flex>
+            <md-toolbar class="md-whiteframe-glow-z1 site-content-toolbar">
+                <div class="md-toolbar-tools docs-toolbar-tools" tabIndex="-1">
+                    <!-- TODO:  hamburger button -->
+                    <md-button class="md-icon-button" ng-click="sn.toggleLeftMenu()" hide-gt-sm aria-label="Toggle Menu">
+                        <md-icon>menu</md-icon>
+                    </md-button>
 
-                <!-- TODO:  layout row with section title information -->
-                <div layout="row" flex class="fill-height">
-                    <md-button class="md-fab"  ng-click="vm.toggleLeftMenu()" ng-disabled="false" aria-label="Toggle Left Menu" md-no-ink="true" md-ripple-size="full">Toggle</md-button>
-                    <a href="#/dkpagetemplates/tripwiremag">tripwire magazine</a>
+                    <!-- TODO:  layout row with section title information -->
+                    <div layout="row" flex class="fill-height">
+                        <md-button class="md-fab" ng-click="sn.toggleLeftMenu()" ng-disabled="false" aria-label="Toggle Left Menu" md-no-ink="true" md-ripple-size="full">Toggle</md-button>
+                        <a href="#/dkpagetemplates/tripwiremag">tripwire magazine</a>
+                    </div>
+
+                    <span flex></span>
+                    <!-- use up the empty space -->
+                    <!-- use up the empty space -->
+                    <!-- TODO:  right side menu information -->
+
+                    <div class="md-toolbar-item docs-tools" layout="row">
+                        <img src="https://placehold.it/150x40?text=rightside" alt="" />
+                    </div>
                 </div>
+            </md-toolbar>
 
-                <span flex></span>
-                <!-- use up the empty space -->
-                <!-- use up the empty space -->
-                <!-- TODO:  right side menu information -->
 
-                <div class="md-toolbar-item docs-tools" layout="row">
-                    <img src="https://placehold.it/150x40?text=rightside" alt="" />
+            <md-content md-scroll-y layout="column" layout-padding flex>
+                <div ui-view="content" class="workshop-content">
                 </div>
-            </div>
-        </md-toolbar>
-
-
-        <md-content md-scroll-y layout="column" layout-padding flex>
-            <div ui-view="content" class="workshop-content">
-            </div>
-            <div layout="row" flex="noshrink" layout-align="center center">
-                <div id="license-footer" flex></div>
-            </div>
-        </md-content>
+                <div layout="row" flex="noshrink" layout-align="center center">
+                    <div id="license-footer" flex></div>
+                </div>
+            </md-content>
+        </div>
     </div>
 </div>

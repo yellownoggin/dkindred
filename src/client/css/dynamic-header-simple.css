@@ -1,0 +1,20 @@
+.simple-header {
+    height: 200px;
+}
+.hero-simple {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+}
+.hero-simple ._page-title {
+    color: #fff;
+    font-size: 56px;
+    line-height: 1;
+    padding: 0 32px;
+    will-change: transform;
+}
+._page-title {
+    font-family: "Roboto Mono", Roboto, sans-serif;
+    font-weight: 400;
+}

@@ -7,61 +7,66 @@ namespace dkindred {
     'use strict';
 
     class DkindredController {
-        static $inject: Array<string> = ['$state', '$timeout', '$rootScope'];
+        static $inject: Array<string> = ['$state', '$scope', '$timeout', '$rootScope'];
 
         useDKindredShell: boolean;
         usePageTemplatesShell: boolean;
         useWorkshopShell: boolean;
         useBlogsShell: boolean;
+        backgroundColor: Object;
+        headerTextColor: Object;
 
-        constructor(public state: angular.ui.IStateService, public timeout: angular.ITimeoutService, private rootScope: angular.IRootScopeService) {
+
+        constructor(public state: angular.ui.IStateService, public scope: angular.IScope, public timeout: angular.ITimeoutService, private rootScope: angular.IRootScopeService) {
 
 
             // TODO: t this alpine notebehavior this would not read the url arguments go back to the beginning. Why did I originally put this in I thought that if you put the link in the browser it would not alter the proper shell directive
             // this.getProperShellDelay();
-            this.changeToProperShell();
+            this.makeDynamic();
+            // this.setCategoryColors(cat);
+            // this.watchChangeColor();
         }
 
-
-        public getProperShell(state: angular.ui.IStateService) {
-            if (state.includes('dkworkshop-ws')) {
-                // console.log(this.stateCategory, 'get proper show');
-                console.log(this.usePageTemplatesShell, 'templates');
-                console.log(this.useWorkshopShell, 'workshop');
-                console.log(this.useDKindredShell, 'd kindred');
-
-                this.useDKindredShell = false;
-                this.usePageTemplatesShell = true;
-                this.useWorkshopShell = true;
-
-            } else if (state.includes('dkpagetemplates')) {
-                console.log(this.usePageTemplatesShell, 'templates');
-                console.log(this.useWorkshopShell, 'workshop');
-                console.log(this.useDKindredShell, 'd kindred');
-                this.useWorkshopShell = false;
-                this.useDKindredShell = false;
-                this.usePageTemplatesShell = true;
-
-            } else {
-                console.log(this.usePageTemplatesShell, 'templates');
-                console.log(this.useWorkshopShell, 'workshop');
-                console.log(this.useDKindredShell, 'd kindred');
-
-                this.usePageTemplatesShell = false;
-                this.useWorkshopShell = false;
-                this.useDKindredShell = true;
-            }
-        }
+        // TODO: determine if I should delete or not-I don't think this is useful
+        // public getProperShell(state: angular.ui.IStateService) {
+        //     if (state.includes('dkworkshop-ws')) {
+        //         // console.log(this.stateCategory, 'get proper show');
+        //         console.log(this.usePageTemplatesShell, 'templates');
+        //         console.log(this.useWorkshopShell, 'workshop');
+        //         console.log(this.useDKindredShell, 'd kindred');
+        //
+        //         this.useDKindredShell = false;
+        //         this.usePageTemplatesShell = true;
+        //         this.useWorkshopShell = true;
+        //
+        //     } else if (state.includes('dkpagetemplates')) {
+        //         console.log(this.usePageTemplatesShell, 'templates');
+        //         console.log(this.useWorkshopShell, 'workshop');
+        //         console.log(this.useDKindredShell, 'd kindred');
+        //         this.useWorkshopShell = false;
+        //         this.useDKindredShell = false;
+        //         this.usePageTemplatesShell = true;
+        //
+        //     } else {
+        //         console.log(this.usePageTemplatesShell, 'templates');
+        //         console.log(this.useWorkshopShell, 'workshop');
+        //         console.log(this.useDKindredShell, 'd kindred');
+        //
+        //         this.usePageTemplatesShell = false;
+        //         this.useWorkshopShell = false;
+        //         this.useDKindredShell = true;
+        //     }
+        // }
         // TODO: Refreshing not working
         //  this may be the source or area to look at for the issue of refreshing going back to original state issue =>
         // Reason: there is a slight delay before going back to the original state(home page)
         // Conclusion: not reading state from the url
         // may also just be a you are router/method I can add
-        private getProperShellDelay() {
-            this.timeout(() => this.getProperShell(this.state), 500);
-        }
+        // private getProperShellDelay() {
+        //     this.timeout(() => this.getProperShell(this.state), 500);
+        // }
 
-        private changeToProperShell() {
+        private makeDynamic() {
             this.rootScope.$on('$stateChangeStart',
                 (event: any, toState: any) => {
                     console.log(toState.name, 'state name');
@@ -75,12 +80,16 @@ namespace dkindred {
                         this.usePageTemplatesShell = false;
                         this.useBlogsShell = false;
                         this.useWorkshopShell = true;
+                        this.backgroundColor = { 'background-color': 'rgb(69, 90, 100);' };
+                        this.headerTextColor = { 'color': '#FFFF8d' };
 
                     } else if (i > 0) {
                         this.useDKindredShell = false;
                         this.useWorkshopShell = false;
                         this.useBlogsShell = false;
                         this.usePageTemplatesShell = true;
+                        this.backgroundColor = { 'background-color': 'rgb(69, 90, 100);' };
+                        this.headerTextColor = { 'color': '#FFFF8d' };
 
                     } else if (j > 0) {
                         console.log('blogs shell');
@@ -88,16 +97,48 @@ namespace dkindred {
                         this.useWorkshopShell = false;
                         this.usePageTemplatesShell = false;
                         this.useBlogsShell = true;
-
+                        this.backgroundColor = { 'background-color': 'rgb(69, 90, 100)' };
+                        this.headerTextColor = { color: '#ffffff' };
                     } else {
                         console.log('d kindred shell');
                         this.useWorkshopShell = false;
                         this.usePageTemplatesShell = false;
                         this.useBlogsShell = false;
                         this.useDKindredShell = true;
+                        this.backgroundColor = { 'background-color': '#0D47A1;' };
+                        this.headerTextColor = { 'color': '#FFFF8d' };
                     }
                 })
         }
+
+
+        /**
+         * TODO:  documentation         */
+        // watchChangeColor() {
+        //     this.scope.$watch('vm.state.params.categoryId', function(x, y) {
+        //         this.setCategoryColors(x);
+        //     });
+        // }
+
+        //
+        // setCategoryColors(catId) {
+        //     var vm = this;
+        //     switch (catId) {
+        //         case ('full-stack'):
+        //             vm.backgroundColor = { 'background-color': '#455A64' };
+        //             vm.headerTextColor = { 'color': '#fff' };
+        //             break;
+        //         case ('marketeering'):
+        //             vm.backgroundColor = { 'background-color': '#FBC02D' };
+        //             vm.headerTextColor = { 'color': '#282828' };
+        //             break;
+        //         default:
+
+        //     }
+        // }
+
+
+
     }
 
     angular

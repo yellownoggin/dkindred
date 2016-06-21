@@ -2,43 +2,14 @@ var dkindred;
 (function (dkindred) {
     'use strict';
     var DkindredController = (function () {
-        function DkindredController(state, timeout, rootScope) {
+        function DkindredController(state, scope, timeout, rootScope) {
             this.state = state;
+            this.scope = scope;
             this.timeout = timeout;
             this.rootScope = rootScope;
-            this.changeToProperShell();
+            this.makeDynamic();
         }
-        DkindredController.prototype.getProperShell = function (state) {
-            if (state.includes('dkworkshop-ws')) {
-                console.log(this.usePageTemplatesShell, 'templates');
-                console.log(this.useWorkshopShell, 'workshop');
-                console.log(this.useDKindredShell, 'd kindred');
-                this.useDKindredShell = false;
-                this.usePageTemplatesShell = true;
-                this.useWorkshopShell = true;
-            }
-            else if (state.includes('dkpagetemplates')) {
-                console.log(this.usePageTemplatesShell, 'templates');
-                console.log(this.useWorkshopShell, 'workshop');
-                console.log(this.useDKindredShell, 'd kindred');
-                this.useWorkshopShell = false;
-                this.useDKindredShell = false;
-                this.usePageTemplatesShell = true;
-            }
-            else {
-                console.log(this.usePageTemplatesShell, 'templates');
-                console.log(this.useWorkshopShell, 'workshop');
-                console.log(this.useDKindredShell, 'd kindred');
-                this.usePageTemplatesShell = false;
-                this.useWorkshopShell = false;
-                this.useDKindredShell = true;
-            }
-        };
-        DkindredController.prototype.getProperShellDelay = function () {
-            var _this = this;
-            this.timeout(function () { return _this.getProperShell(_this.state); }, 500);
-        };
-        DkindredController.prototype.changeToProperShell = function () {
+        DkindredController.prototype.makeDynamic = function () {
             var _this = this;
             this.rootScope.$on('$stateChangeStart', function (event, toState) {
                 console.log(toState.name, 'state name');
@@ -50,12 +21,16 @@ var dkindred;
                     _this.usePageTemplatesShell = false;
                     _this.useBlogsShell = false;
                     _this.useWorkshopShell = true;
+                    _this.backgroundColor = { 'background-color': 'rgb(69, 90, 100);' };
+                    _this.headerTextColor = { 'color': '#FFFF8d' };
                 }
                 else if (i > 0) {
                     _this.useDKindredShell = false;
                     _this.useWorkshopShell = false;
                     _this.useBlogsShell = false;
                     _this.usePageTemplatesShell = true;
+                    _this.backgroundColor = { 'background-color': 'rgb(69, 90, 100);' };
+                    _this.headerTextColor = { 'color': '#FFFF8d' };
                 }
                 else if (j > 0) {
                     console.log('blogs shell');
@@ -63,6 +38,8 @@ var dkindred;
                     _this.useWorkshopShell = false;
                     _this.usePageTemplatesShell = false;
                     _this.useBlogsShell = true;
+                    _this.backgroundColor = { 'background-color': 'rgb(69, 90, 100)' };
+                    _this.headerTextColor = { color: '#ffffff' };
                 }
                 else {
                     console.log('d kindred shell');
@@ -70,10 +47,12 @@ var dkindred;
                     _this.usePageTemplatesShell = false;
                     _this.useBlogsShell = false;
                     _this.useDKindredShell = true;
+                    _this.backgroundColor = { 'background-color': '#0D47A1;' };
+                    _this.headerTextColor = { 'color': '#FFFF8d' };
                 }
             });
         };
-        DkindredController.$inject = ['$state', '$timeout', '$rootScope'];
+        DkindredController.$inject = ['$state', '$scope', '$timeout', '$rootScope'];
         return DkindredController;
     }());
     angular

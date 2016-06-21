@@ -81,14 +81,6 @@
 "tags": ["tag 1", "tag 2", "tag 3"],
 "image": "https://placehold.it/1500x750",
 "description": "LoremLorem ipsum dolor sit amet, consectetur adipisicing elit.",
-"content": ""timestamp": "2016-06-18-21-38-28",<div class=\"test-class\">March 24 dolor sit amet, consectetur adipisicing elit. Minus in illo accusamus, ut, id earum cupiditate fugiat laudantium, architecto labore iusto dolore. Veritatis beatae, excepturi doloribus aliquid odit, obcaecati nulla!</div><div class=\"test-class2\">Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit. Minus in illo accusamus, ut, id earum cupiditate fugiat laudantium, architecto labore iusto & dolore. Veritatis beatae, excepturi doloribus aliquid odit, obcaecati nulla!</div><ul><li>list 1</li><li>list name 2</li><li>list name 3</li></ul>"
-},
-{
-"title": "Blog title timestamp",
-"category": "d kindred",
-"tags": ["tag 1", "tag 2", "tag 3"],
-"image": "https://placehold.it/1500x750",
-"description": "LoremLorem ipsum dolor sit amet, consectetur adipisicing elit.",
 "timestamp": "2016-06-18-21-39-58",
 "content": "<div class=\"test-class\">March 24 dolor sit amet, consectetur adipisicing elit. Minus in illo accusamus, ut, id earum cupiditate fugiat laudantium, architecto labore iusto dolore. Veritatis beatae, excepturi doloribus aliquid odit, obcaecati nulla!</div><div class=\"test-class2\">Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit. Minus in illo accusamus, ut, id earum cupiditate fugiat laudantium, architecto labore iusto & dolore. Veritatis beatae, excepturi doloribus aliquid odit, obcaecati nulla!</div><ul><li>list 1</li><li>list name 2</li><li>list name 3</li></ul>"
 },
