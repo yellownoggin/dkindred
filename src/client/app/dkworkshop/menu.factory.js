@@ -32,6 +32,12 @@ var dkindred;
                         type: 'link',
                         id: 'main-toolbars',
                         url: '#/dkworkshop/angular-material-main-toolbar'
+                    },
+                    {
+                        name: 'DH Simple GD',
+                        type: 'link',
+                        id: 'functional design',
+                        url: '#/dkworkshop/dynamic-header-simple-gd'
                     }
                 ]
             }, {

@@ -1,0 +1,112 @@
+/*md-toolbar  -DHSGD*/
+
+.color-fff {
+    color: #ffffff;
+}
+.top-nav-link {}
+.md-title-light {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.005em;
+}
+.site-title-small-button {
+    /*font-weight: 400;
+    font-size: 20px;
+    left: 32px;
+    margin-left: -20px;
+    opacity: 0;
+    padding: 14px 20px;
+    position: absolute;
+    top: 0;*/
+}
+
+/*angular.io resourced*/
+
+.main-nav .main-nav-button {
+    line-height: 56px;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    padding: 0 16px;
+    text-transform: uppercase;
+    font-family: "Roboto", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    border: none;
+    background: none;
+    border-radius: 0;
+    position: relative;
+    letter-spacing: 0.16px;
+    margin: 0;
+    min-width: auto;
+}
+
+/*.title-small {
+    font-size: 24px;
+}
+.title-large {
+    color: #ffffff;
+}*/
+
+.dynamic-simple-header-bottom {
+    height: 200px;
+    position: relative;
+    background-color: rgb(96, 125, 139);
+}
+.page-title-container {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+}
+.page-title-container .title-large {
+    color: #fff;
+    font-size: 56px;
+    line-height: 1;
+    padding: 0 32px;
+    will-change: transform;
+}
+
+.article-post-container {
+    padding: 60px 32px 0;
+}
+
+/**
+ * Animations
+ */
+
+.flash-add {
+    transition: 0s linear all;
+    opacity: 0;
+}
+.flash-add.flash-add-active {
+    transition: 0.5s ease-in all;
+    opacity: 1;
+}
+.flash-add {
+    transition: 0s linear all;
+    opacity: 0;
+}
+.flash-add.flash-add-active {
+    transition: 0.5s ease-in all;
+    opacity: 1;
+}
+
+/*.animate-show*/
+.title-small.ng-hide {
+    opacity: 0;
+}
+.title-small.ng-hide-remove, .title-small.ng-hide-add {
+    transition: all linear 0.5s;
+}
+
+.dynamic-simple-header-bottom {
+    opacity: 1;
+}
+.dynamic-simple-header-bottom.ng-hide-add, .dynamic-simple-header-bottom.ng-hide-remove {
+    transition: all linear 0.5s;
+}
+.dynamic-simple-header-bottom.ng-hide {
+    opacity: 0;
+    height: 0px;
+}

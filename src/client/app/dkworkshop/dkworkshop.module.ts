@@ -106,7 +106,7 @@
             }
 
             angular
-                .module('dkworkshop', ['ngMaterial', 'ui.router', 'dkworkshop.layout', 'dkworkshop.vcard'])
+                .module('dkworkshop', ['ngMaterial', 'ui.router', 'dkworkshop.layout', 'dkworkshop.vcard', 'dhSimpleGD'])
                 .directive('demosContainer', demosContainerDirective)
                 .directive('menuToggle', MenuToggleDirective)
                 .directive('menuLink', MenuLinkDirective)

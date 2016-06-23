@@ -69,15 +69,6 @@ ul li {
 *  in many occasions
 */
 
-
-/*.layout-content, .workshop-content (it used to be)*/
-
-.workshop-content {
-    max-width: 864px;
-    margin: 16px;
-    box-sizing: border-box;
-}
-
 /*Workshop Content demos*/
 
 

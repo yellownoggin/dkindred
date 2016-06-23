@@ -1,0 +1,51 @@
+    <div layout="column" class="dynamic-site-header-simple" layout-fill>
+        <md-toolbar class="md-whiteframe-glow-z1" md-scroll-shrink md-shrink-speed-factor="0.5">
+            <div class="site-width">
+                <!-- TODO:  write a note about this class being a row & purpose -->
+                <Div layout="row" class="md-toolbar-tools">
+
+                    <md-button class="md-icon-button" href="" ng-disabled="false" aria-label="description" md-ripple-size="auto" hide-gt-sm>
+                        <md-icon>menu</md-icon>
+                    </md-button>
+                    <div layout="row" flex>
+
+                        <md-button class="site-title-small-button" href=""  ui-sref="dkworkshop-ws-components" aria-label="site title small">
+                            <span class="title-small color-fff md-title-light" ng-show="dh.titleVisibility">title small</span>
+                        </md-button>
+
+                        <span flex></span>
+                        <div layout="row">
+                            <md-button class="main-nav main-nav-button" ui-sref="dkworkshop-ws-components.link1">
+                                <div class="color-fff top-nav-link">
+                                    <span class="color-fff">sect 1</span>
+                                </div>
+                            </md-button>
+                            <md-button class="main-nav main-nav-button" ui-sref="dkworkshop-ws-components.link2">
+                                <span class="color-fff">sect 2</span>
+                            </md-button>
+                            <md-button class="main-nav main-nav-button" ui-sref="dkworkshop-ws-components.link3">
+                                <span class="color-fff">sect 3</span>
+                            </md-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </md-toolbar>
+        <!--Note: for scrollShrink to work, the toolbar must be a sibling of a md-content element, placed before it.-->
+        <header class="dynamic-simple-header-bottom" ng-hide="dh.isArticle">
+            <div class="page-title-container">
+                <div class="site-width">
+                    <h1 class="title-large md-display-3 color-fff" animate-change="dh.titleIndex" change-class="flash">
+                        {{dh.titleLargeValue}}
+                    </h1>
+                </div>
+            </div>
+        </header>
+        <div class="main">
+            <div class="article-post-container">
+                <h4 class="article-title-link md-headline">
+                    <a ui-sref="dkworkshop-ws-components.article1">Article Title Mock-linked to article page</a>
+                </h4>
+            </div>
+        </div>
+    </div>
