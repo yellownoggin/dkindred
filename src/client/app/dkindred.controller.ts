@@ -93,10 +93,10 @@ namespace dkindred {
 
                     } else if (j > 0) {
                         console.log('blogs shell');
-                        this.useDKindredShell = false;
+                        this.useDKindredShell = true;
                         this.useWorkshopShell = false;
                         this.usePageTemplatesShell = false;
-                        this.useBlogsShell = true;
+                        this.useBlogsShell = false;
                         this.backgroundColor = { 'background-color': 'rgb(69, 90, 100)' };
                         this.headerTextColor = { color: '#ffffff' };
                     } else {

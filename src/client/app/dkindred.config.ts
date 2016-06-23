@@ -29,6 +29,26 @@ namespace dkindred {
                             // controllerAs: 'vm'
                         }
                     }
+                })
+                .state('link1', {
+                    url: '/',
+                    views: {
+                        "dkContentShell": {
+                            templateUrl: '/app/general-content/partials/home.html'
+                            // controller: 'HomeController',
+                            // controllerAs: 'vm'
+                        }
+                    }
+                })
+                .state('link2', {
+                    url: '/',
+                    views: {
+                        "dkContentShell": {
+                            templateUrl: '/app/general-content/partials/home.html'
+                            // controller: 'HomeController',
+                            // controllerAs: 'vm'
+                        }
+                    }
                 });
                 // TODO:   add admin state
         }

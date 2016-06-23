@@ -15,6 +15,22 @@ var dkindred;
                     templateUrl: '/app/general-content/partials/home.html'
                 }
             }
+        })
+            .state('link1', {
+            url: '/',
+            views: {
+                "dkContentShell": {
+                    templateUrl: '/app/general-content/partials/home.html'
+                }
+            }
+        })
+            .state('link2', {
+            url: '/',
+            views: {
+                "dkContentShell": {
+                    templateUrl: '/app/general-content/partials/home.html'
+                }
+            }
         });
     }
     function initTheme($mdThemingProvider) {

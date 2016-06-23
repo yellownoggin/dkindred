@@ -4,6 +4,6 @@ var dkindred;
     (function (layout) {
         'use strict';
         angular
-            .module('dkindred.layout', []);
+            .module('dkindred.layout', ['dhSimpleGD']);
     })(layout = dkindred.layout || (dkindred.layout = {}));
 })(dkindred || (dkindred = {}));
