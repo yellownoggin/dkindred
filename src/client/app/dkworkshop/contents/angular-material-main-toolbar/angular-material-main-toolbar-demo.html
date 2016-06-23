@@ -1,21 +1,30 @@
 <demos-container title="'Main Toolbar - Mock Basic'" meta="'Main toolbar essentially for quick mockup purposes. Showing essential/basic markup pattern. Uses include: top page navigations, meta-information, or components action interface.'">
-    <md-toolbar class="md-whiteframe-glow-z1" style="background: #f6f6f6; height: 64px;">
-        <div class="docs-toolbar-tools" layout="row" layout-align="center center" layout-fill>
-            <div class="" style="height: 35px; padding: 3px 5px; background: rgba(0, 0, 0, 0.065); color: #106CC8; font-size: 20px">
-                <div class="" style="text-align: center;">
-                    Logo/Breadcrumb
-                </div>
-            </div>
-            <span flex></span>
-            <div  style="height: 35px; padding: 3px 5px; background: rgba(0, 0, 0, 0.065); color: #106CC8; font-size: 20px">
+    <md-toolbar class="workshop-toolbar-simple  md-whiteframe-glow-z1">
+        <div class="site-width">
+            <div layout="row" class="md-toolbar-tools">
+                <md-button class="md-icon-button" href="" ng-disabled="false" aria-label="Menu" md-ripple-size="auto" hide-gt-sm>
+                    <md-icon>menu</md-icon>
+                </md-button>
+                <div layout="row" flex>
+                    <md-button href="" class="tools-background" aria-label="Page Title">
+                        <span class="md-title-light color-106CC8">
+                            Logo/Page Title
+                    </span>
+                    </md-button>
 
-                <div class="" style="text-align: center;">
-                    Nav Links/Other Tools
+                    <span flex></span>
+
+                    <div layout="row">
+                        <md-button class="tools-background" href="">
+                            <span class="md-title-light color-106CC8">Nav Links/Other Tools</span>
+
+                        </md-button>
+                    </div>
+
                 </div>
 
             </div>
         </div>
-
     </md-toolbar>
 </demos-container>
 
