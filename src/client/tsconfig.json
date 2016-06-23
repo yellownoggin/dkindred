@@ -32,7 +32,6 @@
         "app/dkworkshop/contents/dynamic-header-simple-gd/dh-simple/dh-simple-mock.routes.ts",
         "app/dkworkshop/contents/dynamic-header-simple-gd/dh-simple/dh-simple.directive.ts",
         "app/dkworkshop/contents/dynamic-header-simple-gd/dh-simple/dh-simple.module.ts",
-        "app/dkworkshop/contents/dynamic-header-simple-gd/dh-simple/scratch.ts",
         "app/dkworkshop/contents/vcard-app/vcard-app.module.ts",
         "app/dkworkshop/contents/vcard-app/vcard-app.routes.ts",
         "app/dkworkshop/dkworkshop.module.ts",
