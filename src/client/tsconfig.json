@@ -41,7 +41,6 @@
         "app/dkworkshop/layout/sidenav.controller.ts",
         "app/dkworkshop/menu-link-directive.ts",
         "app/dkworkshop/menu.factory.ts",
-        "app/layout/dh-simple/dh-simple-mock.routes.ts",
         "app/layout/dh-simple/dh-simple.directive-p.ts",
         "app/layout/dh-simple/dh-simple.module.ts",
         "app/layout/dk-nav-toolbar.directive.ts",
