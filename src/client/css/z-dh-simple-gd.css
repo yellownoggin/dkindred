@@ -1,5 +1,8 @@
 /*md-toolbar  -DHSGD*/
-
+.icon-fix-1 {
+    padding: 0 0 0 8px;
+    margin-top: -30px;
+}
 .color-fff {
     color: #ffffff;
 }

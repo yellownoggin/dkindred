@@ -1,0 +1,42 @@
+<div ng-controller="FunnelController as fc">
+    <ul layout="row" class="ul-funnel-body" layout-wrap>
+        <li layout="column" flex="50" ng-repeat="data in fc.funnelData">
+            <a href="#" class="grid-block aspect-16x9 funnel-block">
+                <div class="_bg" style="background-color: #000000"></div>
+                <div class="funnel-image" ng-style="{'background-image':'url({{data.funnelImage}})'}"></div>
+                <!-- div.lazy-placeholder*  -->
+                <!-- this can be a column -->
+                <div class="_text">
+                    <div class="_heading">
+                        <h1 class="title md-headline">
+                        <span>{{data.title}}</span>
+                    </h1>
+                        <p class="funnel-subtitle">
+                            {{data.subtitle}}
+                        </p>
+                    </div>
+                </div>
+
+                <div layout="row" class="_source" flex>
+                    <div layout="row" class="_source-container" flex>
+                        <div layout="column" flex="50" layout-align="center start">
+                            <p class="site-sections">
+                                {{data.category}}
+                            </p>
+                        </div>
+                        <div flex="50" class="_funnel-icon-container" layout-align="center end">
+                            <div class="">
+                                <md-icon class="_funnel-icon" ui-sref="{{data.stateLocation}}">chevron_right</md-icon>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </a>
+        </li>
+
+
+
+
+    </ul>
+</div>

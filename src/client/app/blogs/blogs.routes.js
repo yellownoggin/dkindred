@@ -12,16 +12,16 @@ var dkindred;
                 abstract: true,
                 url: '/dkindred/blogs',
                 views: {
-                    'content': {
-                        templateUrl: '/app/blogs/blogs.tmpl.html'
+                    'mainSite': {
+                        templateUrl: '/app/general-content/partials/blogs-home.html'
                     }
                 }
             })
                 .state('dkindred-blogs.all', {
                 url: '/all-posts',
                 views: {
-                    'blogContent': {
-                        templateUrl: '/app/blogs/blogs-list-all.tmpl.html'
+                    'mainSite': {
+                        template: 'testing'
                     }
                 }
             })

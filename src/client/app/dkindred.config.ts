@@ -23,6 +23,26 @@ namespace dkindred {
                 .state('home', {
                     url: '/',
                     views: {
+                        "mainSite": {
+                            templateUrl: '/app/layout/funnel-body/funnel-body.html'
+                            // controller: 'HomeController',
+                            // controllerAs: 'vm'
+                        }
+                    }
+                })
+                .state('link1', {
+                    url: '/link1',
+                    views: {
+                        "dkContentShell": {
+                            templateUrl: '/app/general-content/partials/home.html'
+                            // controller: 'HomeController',
+                            // controllerAs: 'vm'
+                        }
+                    }
+                })
+                .state('link2', {
+                    url: '/link2',
+                    views: {
                         "dkContentShell": {
                             templateUrl: '/app/general-content/partials/home.html'
                             // controller: 'HomeController',

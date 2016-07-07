@@ -34,10 +34,10 @@ var dkindred;
                 }
                 else if (j > 0) {
                     console.log('blogs shell');
-                    _this.useDKindredShell = false;
+                    _this.useDKindredShell = true;
                     _this.useWorkshopShell = false;
                     _this.usePageTemplatesShell = false;
-                    _this.useBlogsShell = true;
+                    _this.useBlogsShell = false;
                     _this.backgroundColor = { 'background-color': 'rgb(69, 90, 100)' };
                     _this.headerTextColor = { color: '#ffffff' };
                 }

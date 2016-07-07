@@ -1,14 +1,14 @@
-<div layout="column" layout-fill>
-    <dk-nav-toolbar></dk-nav-toolbar>
-    <header ng-class="{{vm.backgroundColor}}">
-    <!-- <header class="background-sky-blue-green"> -->
-        <div class="hero">
-            D &middot; Kindred <span><md-icon style="color:#fff;">hdr_weak</md-icon></span>
-        </div>
-    </header>
-    <p>
-        <a href="#/dkworkshop">workshop application</a>
-    </p>
+<dh-simple-gd-p></dh-simple-gd-p>
+<div class="main">
+    <!-- <div class="article-post-container">
+        <h4 class="article-title-link md-headline">
+                <a ui-sref="link2">Article Title Mock-linked to article page: testing</a>
+            </h4>
+    </div> -->
+    <div class="site-width">
+        <div ui-view="mainSite"></div>
+    </div>
+    <!-- site width -->
 
-    <div ui-view="homePageContent"></div>
 </div>
+<!-- main -->
