@@ -22,7 +22,7 @@ namespace dkindred.blogs {
         bindBlogPosts() {
             var vm = this;
             this.blogsService.getBlogPosts().then(function(object) {
-                console.log(object.data);
+                // console.log(object.data);
             vm.allBlogPosts = object.data;
             // angular.forEach(vm.allBlogPosts, function (blogObject, i) {
             //

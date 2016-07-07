@@ -45,6 +45,8 @@
         "app/layout/dh-simple/dh-simple.module.ts",
         "app/layout/dk-nav-toolbar.directive.ts",
         "app/layout/dkindred-shell.directive.ts",
+        "app/layout/funnel-body/funnel-body.controller.ts",
+        "app/layout/funnel-body/funnel-body.service.ts",
         "app/layout/layout.module.ts",
         "typings/angular-material/angular-material.d.ts",
         "typings/angular-ui-router/angular-ui-router.d.ts",

@@ -11,13 +11,13 @@ var dkindred;
             .state('home', {
             url: '/',
             views: {
-                "dkContentShell": {
-                    templateUrl: '/app/general-content/partials/home.html'
+                "mainSite": {
+                    templateUrl: '/app/layout/funnel-body/funnel-body.html'
                 }
             }
         })
             .state('link1', {
-            url: '/',
+            url: '/link1',
             views: {
                 "dkContentShell": {
                     templateUrl: '/app/general-content/partials/home.html'
@@ -25,7 +25,7 @@ var dkindred;
             }
         })
             .state('link2', {
-            url: '/',
+            url: '/link2',
             views: {
                 "dkContentShell": {
                     templateUrl: '/app/general-content/partials/home.html'

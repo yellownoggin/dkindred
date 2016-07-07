@@ -1,0 +1,29 @@
+{
+    "funnel": [{
+            "title": "Test Title 1",
+            "subtitle": "subtitle test 1",
+            "funnelImage": "./images/620x620transparent.png",
+            "category": "Test Category",
+            "stateLocation": "home"
+        }, {
+            "title": "Test Title 1",
+            "subtitle": "subtitle test 1",
+            "funnelImage": "./images/620x620transparent.png",
+            "category": "Test Category",
+            "stateLocation": "link2"
+        }, {
+            "title": "Test Title 1",
+            "subtitle": "subtitle test 1",
+            "funnelImage": "./images/620x620transparent.png",
+            "category": "Test Category",
+            "stateLocation": "home"
+        }, {
+            "title": "Test Title 1",
+            "subtitle": "subtitle test 1",
+            "funnelImage": "./images/620x620transparent.png",
+            "category": "Test Category",
+            "stateLocation": "home"
+        }
+
+    ]
+}

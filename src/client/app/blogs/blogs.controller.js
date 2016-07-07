@@ -19,7 +19,6 @@ var dkindred;
             BlogsController.prototype.bindBlogPosts = function () {
                 var vm = this;
                 this.blogsService.getBlogPosts().then(function (object) {
-                    console.log(object.data);
                     vm.allBlogPosts = object.data;
                 });
             };
