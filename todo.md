@@ -1,9 +1,44 @@
 # d kindred
 ##  NOW
+blog
+google analytics hero
+- current design component steps
+1: crate directory under contents(dk workshop)
+2: demo file of the same name html
+3: start with mock, css, in html etc.(from the demo file above)
+4: add to menu service
+TODO:
+responsive
+
 start to implement funnel body
+    <!-- * ngrepeat -->
+        <!-- *   needs a service
+            *   SERVICE STEPS
+            *   class with constructor inject http
+            * create method
+            * create variable 2 store it in
+            * etc.
+            *  -->
+        <!-- * why: 2 feed images retrieve images -->
+        <!-- * gather images
+            * look for the ones that you got I think for yellownoggin -->
+        * blogs home view
+        * complete individual blog to(starter)
+            * list ideas(of other elements on the page)
+        * portfolio view start with cards
+        * long-term play around
+    * directive?
 clean dynamic header simple
 stash this somewhere<img src="http://placehold.it/350x150">
+1.images funnel images
+    * digital kindred blog
+    * v card/yellow noggin
+    * portfolio
+    * full stack blog
 
+## list of thoughts
+    * cleaning/optimizing code
+        * mock data/location
 ## synopsis/contents/check off
 
 

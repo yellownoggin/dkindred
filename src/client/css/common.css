@@ -3,6 +3,10 @@
     content: "·";
     left: 50%;
     top: 46%;
-    -webkit-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.bg-f6f6f6 {
+    background: #f6f6f6 !important;
+    color: #202020 !important;
 }

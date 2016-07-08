@@ -1,0 +1,231 @@
+/**
+ * Should go in common.css
+ */
+
+.text-center {
+    text-align: center;
+}
+.color-848484 {
+    color: #848484;
+}
+
+/**
+  * end of common.css
+  */
+
+.site-width-984 {
+    box-sizing: content-box;
+    max-width: 984px;
+    margin: 0 auto;
+    width: 100%;
+}
+.md-title-ga {
+    font-size: 15px;
+    font-weight: 500 !important;
+}
+.border-bottom-eee {
+    border-bottom: solid 2px #eee;
+}
+.font-weight-400 {
+    font-weight: 400;
+}
+.header-top-ga {
+    padding: 20px 20px 0 0 !important;
+    margin-left: 15px;
+}
+.header-top-ga h1 {
+    margin: 0 !important;
+}
+.header h1 {
+    color: #848484;
+    font-family: 'Roboto', arial, sans-serif;
+    /*font-size: 15px;*/
+    line-height: 20px;
+    /*margin: 0 0 0 15px;*/
+    min-height: 47px;
+    overflow: hidden;
+    /*padding: 19px 61px 0;*/
+    position: relative;
+    text-overflow: ellipsis;
+    vertical-align: top;
+    white-space: nowrap;
+}
+.header .main-navigation-ga ul {
+    /*background: #fff;*/
+    display: none;
+    /*padding: 0 0 130px 0;*/
+}
+.header .main-navigation-ga li {
+    border-left: 4px solid #fff;
+    color: #444;
+    display: block;
+    font-weight: 500;
+    list-style-type: none;
+    margin: 0;
+    min-height: 55px;
+    opacity: 0;
+    padding: 0;
+    position: relative;
+    -webkit-transition: all 300ms 200ms;
+    -moz-transition: all 300ms 200ms;
+    -ms-transition: all 300ms 200ms;
+    -o-transition: all 300ms 200ms;
+    transition: all 300ms 200ms;
+}
+.header .nav-toggle-button {
+    background: #448aff;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    height: 60px;
+    line-height: 60px;
+    outline: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 60px;
+}
+
+/*this is a link needs a  href*/
+
+.header .nav-dropdown-trigger {
+    color: #448aff;
+    /*padding-left: 0;*/
+    /*text-align: center;*/
+    text-transform: uppercase;
+    /*width: 95%;*/
+    display: none;
+}
+
+/**
+ * Hero Section
+ */
+
+.section {
+    /*padding: 42px 0 44px;*/
+    position: relative;
+}
+.section-hero {
+    max-height: 430px;
+}
+.section-hero-media {
+    min-height: 400px;
+}
+.hero-img {
+    background-image: url('/images/800x540-gray.png');
+    background-position: 81%;
+}
+.hero-image {
+    background-position: left center;
+    background-size: cover;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.fab-bottom-center {
+    bottom: 375px;
+    left: 15px;
+    position: absolute;
+    z-index: 100;
+}
+.md-icon-848484 {
+    background-color: #848484 !important;
+    color: #ffffff !important;
+}
+.section-hero-copy {
+    padding-bottom: 46px;
+    padding-top: 32px;
+}
+.h1-roboto-slab {
+    color: #444;
+    font-family: 'Roboto Slab', palatino, serif;
+    font-weight: 300;
+    letter-spacing: -.2px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+.section-content-mock {
+    min-height: 400px;
+}
+
+/**
+ * Media Query 600
+ */
+
+@media (min-width: 600px) {
+    .header .main-navigation-ga li {
+        border-left: 0;
+        display: inline-block;
+        left: auto;
+        margin: 0 20px;
+        opacity: 1;
+        padding: 15px 0;
+        position: static;
+        -webkit-transition: none;
+        -moz-transition: none;
+        -ms-transition: none;
+        -o-transition: none;
+        transition: none;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+        transform: none;
+    }
+}
+@media (min-width: 960px) {
+    .header-top-ga {
+        margin-left: 40px;
+        height: 47px;
+    }
+    .header .main-navigation-ga ul {
+        padding: 5px 20px 0 20px;
+        display: block;
+        height: 1%;
+        margin: 0;
+        min-height: 60px;
+        overflow: hidden;
+    }
+    .header .nav-toggle-button {
+        display: none;
+    }
+    .header .nav-dropdown-trigger {
+        display: block;
+        /*height: 70px;*/
+        /*line-height: 70px;*/
+        padding: 0 20px;
+        /*text-align: center;*/
+    }
+    .md-title-ga {
+        font-size: 20px;
+        font-weight: 500 !important;
+    }
+    .section-hero-copy {
+        padding-bottom: 80px;
+        padding-top: 80px;
+    }
+    .fab-bottom-center {
+        bottom: 25px;
+        left: 50%;
+        margin-left: -25px;
+    }
+    .hero-img {
+        background-image: url('/images/800x540-gray.png');
+        background-size: cover;
+    }
+    .section-hero-media.section-hero-media-right {
+        left: auto;
+        right: 0;
+    }
+    .section-hero-media {
+        bottom: 0;
+        position: absolute;
+        top: 0;
+        width: 50%;
+    }
+}

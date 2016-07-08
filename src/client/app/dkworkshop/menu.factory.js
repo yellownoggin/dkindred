@@ -38,6 +38,12 @@ var dkindred;
                         type: 'link',
                         id: 'functional design',
                         url: '#/dkworkshop/dynamic-header-simple-gd'
+                    },
+                    {
+                        name: 'Google Analytics Hero',
+                        type: 'link',
+                        id: 'functional design',
+                        url: '#/dkworkshop/google-analytics-hero'
                     }
                 ]
             }, {
