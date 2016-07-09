@@ -2,8 +2,9 @@
 "title": "Blog title 2",
 "category": "full-stack",
 "tags": ["tag 1", "tag 2", "tag 3"],
-"image": "https://placehold.it/1500x750",
-"description": "LoremLorem ipsum dolor sit amet, consectetur adipisicing elit.",
+"image": "./images/1280x853-gray.png",
+"teaser": "Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+"timestamp": "2016-06-18-21-39-58",
 "content": "<div class=\"test-class\">March 24 dolor sit amet, consectetur adipisicing elit. Minus in illo accusamus, ut, id earum cupiditate fugiat laudantium, architecto labore iusto dolore. Veritatis beatae, excepturi doloribus aliquid odit, obcaecati nulla!</div><div class=\"test-class2\">Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit. Minus in illo accusamus, ut, id earum cupiditate fugiat laudantium, architecto labore iusto & dolore. Veritatis beatae, excepturi doloribus aliquid odit, obcaecati nulla!</div><ul><li>list 1</li><li>list name 2</li><li>list name 3</li></ul>"
 },
 
@@ -11,8 +12,9 @@
 "title": "Blog title 3",
 "category": "full-stack",
 "tags": ["tag 1", "tag 2", "tag 3"],
-"image": "https://placehold.it/1500x750",
-"description": "LoremLorem ipsum dolor sit amet, consectetur adipisicing elit.",
+"image": "./images/1280x853-gray.png",
+"teaser": "Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+"timestamp": "2016-06-18-21-39-58",
 "content": "<div class=\"test-class\">March 24 dolor sit amet, consectetur adipisicing elit. Minus in illo accusamus, ut, id earum cupiditate fugiat laudantium, architecto labore iusto dolore. Veritatis beatae, excepturi doloribus aliquid odit, obcaecati nulla!</div><div class=\"test-class2\">Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit. Minus in illo accusamus, ut, id earum cupiditate fugiat laudantium, architecto labore iusto & dolore. Veritatis beatae, excepturi doloribus aliquid odit, obcaecati nulla!</div><ul><li>list 1</li><li>list name 2</li><li>list name 3</li></ul>"
 },
 
@@ -20,8 +22,9 @@
 "title": "Blog title 4",
 "category": "full-stack",
 "tags": ["tag 1", "tag 2", "tag 3"],
-"image": "https://placehold.it/1500x750",
-"description": "LoremLorem ipsum dolor sit amet, consectetur adipisicing elit.",
+"image": "./images/1280x853-gray.png",
+"teaser": "Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+"timestamp": "2016-06-18-21-39-58",
 "content": "<div class=\"test-class\">March 24 dolor sit amet, consectetur adipisicing elit. Minus in illo accusamus, ut, id earum cupiditate fugiat laudantium, architecto labore iusto dolore. Veritatis beatae, excepturi doloribus aliquid odit, obcaecati nulla!</div><div class=\"test-class2\">Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit. Minus in illo accusamus, ut, id earum cupiditate fugiat laudantium, architecto labore iusto & dolore. Veritatis beatae, excepturi doloribus aliquid odit, obcaecati nulla!</div><ul><li>list 1</li><li>list name 2</li><li>list name 3</li></ul>"
 },
 
@@ -29,76 +32,81 @@
 "title": "Blog title 5",
 "category": "full-stack",
 "tags": ["tag 1", "tag 2", "tag 3"],
-"image": "https://placehold.it/1500x750",
-"description": "LoremLorem ipsum dolor sit amet, consectetur adipisicing elit.",
+"image": "./images/1280x853-gray.png",
+"teaser": "Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 "content": "<div class=\"test-class\">March 24 dolor sit amet, consectetur adipisicing elit. Minus in illo accusamus, ut, id earum cupiditate fugiat laudantium, architecto labore iusto dolore. Veritatis beatae, excepturi doloribus aliquid odit, obcaecati nulla!</div><div class=\"test-class2\">Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit. Minus in illo accusamus, ut, id earum cupiditate fugiat laudantium, architecto labore iusto & dolore. Veritatis beatae, excepturi doloribus aliquid odit, obcaecati nulla!</div><ul><li>list 1</li><li>list name 2</li><li>list name 3</li></ul>"
 },
 
 {
-"title": "Blog title 5",
+"title": "Blog title 6",
 "category": "full-stack",
 "tags": ["tag 1", "tag 2", "tag 3"],
-"image": "https://placehold.it/1500x750",
-"description": "LoremLorem ipsum dolor sit amet, consectetur adipisicing elit.",
+"image": "./images/1280x853-gray.png",
+"teaser": "Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+"timestamp": "2016-06-18-21-39-58",
 "content": "<div class=\"test-class\">March 24 dolor sit amet, consectetur adipisicing elit. Minus in illo accusamus, ut, id earum cupiditate fugiat laudantium, architecto labore iusto dolore. Veritatis beatae, excepturi doloribus aliquid odit, obcaecati nulla!</div><div class=\"test-class2\">Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit. Minus in illo accusamus, ut, id earum cupiditate fugiat laudantium, architecto labore iusto & dolore. Veritatis beatae, excepturi doloribus aliquid odit, obcaecati nulla!</div><ul><li>list 1</li><li>list name 2</li><li>list name 3</li></ul>"
 },
 
 {
-"title": "Blog title 5",
-"category": "d kindred",
+"title": "Blog title 7",
+"category": "digi-kindred",
 "tags": ["tag 1", "tag 2", "tag 3"],
-"image": "https://placehold.it/1500x750",
-"description": "LoremLorem ipsum dolor sit amet, consectetur adipisicing elit.",
+"image": "./images/1280x853-gray.png",
+"teaser": "Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+"timestamp": "2016-06-18-21-39-58",
 "content": "<div class=\"test-class\">March 24 dolor sit amet, consectetur adipisicing elit. Minus in illo accusamus, ut, id earum cupiditate fugiat laudantium, architecto labore iusto dolore. Veritatis beatae, excepturi doloribus aliquid odit, obcaecati nulla!</div><div class=\"test-class2\">Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit. Minus in illo accusamus, ut, id earum cupiditate fugiat laudantium, architecto labore iusto & dolore. Veritatis beatae, excepturi doloribus aliquid odit, obcaecati nulla!</div><ul><li>list 1</li><li>list name 2</li><li>list name 3</li></ul>"
 },
 {
-"title": "Blog title 5",
-"category": "d kindred",
+"title": "Blog title 8",
+"category": "digi-kindred",
 "tags": ["tag 1", "tag 2", "tag 3"],
-"image": "https://placehold.it/1500x750",
-"description": "LoremLorem ipsum dolor sit amet, consectetur adipisicing elit.",
+"image": "./images/1280x853-gray.png",
+"teaser": "Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+"timestamp": "2016-06-18-21-39-58",
 "content": "<div class=\"test-class\">March 24 dolor sit amet, consectetur adipisicing elit. Minus in illo accusamus, ut, id earum cupiditate fugiat laudantium, architecto labore iusto dolore. Veritatis beatae, excepturi doloribus aliquid odit, obcaecati nulla!</div><div class=\"test-class2\">Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit. Minus in illo accusamus, ut, id earum cupiditate fugiat laudantium, architecto labore iusto & dolore. Veritatis beatae, excepturi doloribus aliquid odit, obcaecati nulla!</div><ul><li>list 1</li><li>list name 2</li><li>list name 3</li></ul>"
 },
 {
-"title": "Blog title 5",
-"category": "d kindred",
+"title": "Blog title 9",
+"category": "digi-kindred",
 "tags": ["tag 1", "tag 2", "tag 3"],
-"image": "https://placehold.it/1500x750",
-"description": "LoremLorem ipsum dolor sit amet, consectetur adipisicing elit.",
+"image": "./images/1280x853-gray.png",
+"teaser": "Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+"timestamp": "2016-06-18-21-39-58",
 "content": "<div class=\"test-class\">March 24 dolor sit amet, consectetur adipisicing elit. Minus in illo accusamus, ut, id earum cupiditate fugiat laudantium, architecto labore iusto dolore. Veritatis beatae, excepturi doloribus aliquid odit, obcaecati nulla!</div><div class=\"test-class2\">Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit. Minus in illo accusamus, ut, id earum cupiditate fugiat laudantium, architecto labore iusto & dolore. Veritatis beatae, excepturi doloribus aliquid odit, obcaecati nulla!</div><ul><li>list 1</li><li>list name 2</li><li>list name 3</li></ul>"
 },
 {
-"title": "Blog title 5",
-"category": "d kindred",
+"title": "Blog title 10",
+"category": "digi-kindred",
 "tags": ["tag 1", "tag 2", "tag 3"],
-"image": "https://placehold.it/1500x750",
-"description": "LoremLorem ipsum dolor sit amet, consectetur adipisicing elit.",
-"content": "<div class=\"test-class\">March 24 dolor sit amet, consectetur adipisicing elit. Minus in illo accusamus, ut, id earum cupiditate fugiat laudantium, architecto labore iusto dolore. Veritatis beatae, excepturi doloribus aliquid odit, obcaecati nulla!</div><div class=\"test-class2\">Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit. Minus in illo accusamus, ut, id earum cupiditate fugiat laudantium, architecto labore iusto & dolore. Veritatis beatae, excepturi doloribus aliquid odit, obcaecati nulla!</div><ul><li>list 1</li><li>list name 2</li><li>list name 3</li></ul>"
-},
-{
-"title": "Blog title timestamp",
-"category": "d kindred",
-"tags": ["tag 1", "tag 2", "tag 3"],
-"image": "https://placehold.it/1500x750",
-"description": "LoremLorem ipsum dolor sit amet, consectetur adipisicing elit.",
+"image": "./images/1280x853-gray.png",
+"teaser": "Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 "timestamp": "2016-06-18-21-39-58",
 "content": "<div class=\"test-class\">March 24 dolor sit amet, consectetur adipisicing elit. Minus in illo accusamus, ut, id earum cupiditate fugiat laudantium, architecto labore iusto dolore. Veritatis beatae, excepturi doloribus aliquid odit, obcaecati nulla!</div><div class=\"test-class2\">Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit. Minus in illo accusamus, ut, id earum cupiditate fugiat laudantium, architecto labore iusto & dolore. Veritatis beatae, excepturi doloribus aliquid odit, obcaecati nulla!</div><ul><li>list 1</li><li>list name 2</li><li>list name 3</li></ul>"
 },
 {
 "title": "Blog title timestamp",
-"category": "d kindred",
+"category": "digi-kindred",
 "tags": ["tag 1", "tag 2", "tag 3"],
-"image": "https://placehold.it/1500x750",
-"description": "LoremLorem ipsum dolor sit amet, consectetur adipisicing elit.",
+"image": "./images/1280x853-gray.png",
+"teaser": "Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+"timestamp": "2016-06-18-21-39-58",
+"content": "<div class=\"test-class\">March 24 dolor sit amet, consectetur adipisicing elit. Minus in illo accusamus, ut, id earum cupiditate fugiat laudantium, architecto labore iusto dolore. Veritatis beatae, excepturi doloribus aliquid odit, obcaecati nulla!</div><div class=\"test-class2\">Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit. Minus in illo accusamus, ut, id earum cupiditate fugiat laudantium, architecto labore iusto & dolore. Veritatis beatae, excepturi doloribus aliquid odit, obcaecati nulla!</div><ul><li>list 1</li><li>list name 2</li><li>list name 3</li></ul>"
+},
+{
+"title": "Blog title 11",
+"category": "digi-kindred",
+"tags": ["tag 1", "tag 2", "tag 3"],
+"image": "./images/1280x853-gray.png",
+"teaser": "Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 "timestamp": "2016-06-18-21-40-32",
 "content": "<div class=\"test-class\">March 24 dolor sit amet, consectetur adipisicing elit. Minus in illo accusamus, ut, id earum cupiditate fugiat laudantium, architecto labore iusto dolore. Veritatis beatae, excepturi doloribus aliquid odit, obcaecati nulla!</div><div class=\"test-class2\">Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit. Minus in illo accusamus, ut, id earum cupiditate fugiat laudantium, architecto labore iusto & dolore. Veritatis beatae, excepturi doloribus aliquid odit, obcaecati nulla!</div><ul><li>list 1</li><li>list name 2</li><li>list name 3</li></ul>"
 },
 {
-"title": "Blog title timestamp",
-"category": "d kindred",
+"title": "Blog title 12",
+"category": "digi-kindred",
 "tags": ["tag 1", "tag 2", "tag 3"],
-"image": "https://placehold.it/1500x750",
-"description": "LoremLorem ipsum dolor sit amet, consectetur adipisicing elit.",
+"image": "./images/1280x853-gray.png",
+"teaser": "Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 "timestamp": "2016-06-18-22-17-55",
 "content": "<div class=\"test-class\">March 24 dolor sit amet, consectetur adipisicing elit. Minus in illo accusamus, ut, id earum cupiditate fugiat laudantium, architecto labore iusto dolore. Veritatis beatae, excepturi doloribus aliquid odit, obcaecati nulla!</div><div class=\"test-class2\">Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit. Minus in illo accusamus, ut, id earum cupiditate fugiat laudantium, architecto labore iusto & dolore. Veritatis beatae, excepturi doloribus aliquid odit, obcaecati nulla!</div><ul><li>list 1</li><li>list name 2</li><li>list name 3</li></ul>"
 }]

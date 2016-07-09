@@ -1,6 +1,11 @@
+If you know how to design the software, design the software. Otherwise implement now, learn, and design later.
+
 # d kindred
 ##  NOW
 blog
+all posts
+all post categories
+all post categories no show top blog parlike
 google analytics hero
 - current design component steps
 1: crate directory under contents(dk workshop)
@@ -9,6 +14,12 @@ google analytics hero
 4: add to menu service
 TODO:
 responsive
+
+
+Blog Component
+    - category blog pages finish
+    - individual blog posts(clean?)
+
 
 start to implement funnel body
     <!-- * ngrepeat -->

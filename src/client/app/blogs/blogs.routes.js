@@ -20,24 +20,24 @@ var dkindred;
                 .state('dkindred-blogs.all', {
                 url: '/all-posts',
                 views: {
-                    'mainSite': {
-                        template: 'testing'
+                    'blog': {
+                        templateUrl: '/app/blogs/blogs-all-posts.html'
                     }
                 }
             })
-                .state('dkindred-blogs.dkindred', {
-                url: '/digital-kindred',
+                .state('dkindred-blogs.category', {
+                url: '/:categoryId',
                 views: {
-                    'content': {
-                        template: 'this is the digital kindred blogs posts page'
+                    'blog': {
+                        templateUrl: '/app/blogs/blogs-all-posts.html'
                     }
                 }
             })
-                .state('dkindred-blogs.fullstack', {
-                url: '/full-stack',
+                .state('dkindred-blogs.posts', {
+                url: '/:categoryId/:postId',
                 views: {
-                    'content': {
-                        template: 'this is the full stack blogs posts page'
+                    'blog': {
+                        templateUrl: '/app/blogs/blog-post.partial.html'
                     }
                 }
             });

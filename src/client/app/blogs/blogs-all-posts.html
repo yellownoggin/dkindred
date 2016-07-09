@@ -1,0 +1,59 @@
+<div class="all-posts-page-container">
+    <div class="all-posts-top" ng-show="bc.allPostsTopActive">
+        <h1>What do I blog about?</h1>
+        <p>
+            Lorem ipsum , consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.
+        </p>
+
+        <ul layout="row" class="all-posts-top-list">
+            <li flex="100" flex-gt-sm="50">
+                <md-button class="md-raised all-posts-top-list-buttons" ng-href="#/dkindred/blogs/full-stack" aria-label="description" md-no-ink="false" md-ripple-size="full">
+                    <md-icon class="all-posts-top-list-icons">keyboard</md-icon>
+                    <div>Full Stack</div>
+                </md-button>
+            </li>
+            <li flex="100" flex-gt-sm="50">
+                <md-button class="md-raised all-posts-top-list-buttons" ng-href="#/dkindred/blogs/digi-kindred" aria-label="description" md-no-ink="false" md-ripple-size="full">
+                    <md-icon class="all-posts-top-list-icons">devices_other</md-icon>
+                    <div>DKindred</div>
+                </md-button>
+            </li>
+        </ul>
+        <h2>All Posts</h2>
+    </div>
+    <div layout="column" class="all-posts-container">
+
+        <div class="content-list">
+            <ul layout="column">
+                <li layout="row" ng-repeat="post in bc.filteredPosts track by $index">
+
+                    <div layout="column" class="content-column" flex="100" flex-gt-sm="50">
+                        <h4 class="md-headline">
+                            <!-- TODO:  clean urls -->
+                            <a href="#/blogs/post/{{$index}}">{{post.title}}</a></h4>
+                        <p>
+                            {{post.category}}
+                        </p>
+                        <p>
+                            {{post.timestamp}}
+                        </p>
+                        <div class="content-body" flex="100" flex-gt-sm="50">
+                            <p>
+                                {{post.teaser}}
+                            </p>
+                        </div>
+                    </div>
+                    <div layout="column" class="image-column" flex="100" flex-gt-sm="50">
+                        <a href="#">
+                            <div class="_image-wrap">
+                                <div class="_image" ng-style="{'background-image':'url({{post.image}})'}"></div>
+                                <div class="_ratio" style="padding-bottom: 66.6667%;"></div>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div>

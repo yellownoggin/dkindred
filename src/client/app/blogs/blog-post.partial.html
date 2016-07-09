@@ -1,0 +1,25 @@
+<!-- TODO:  do I need a blog post container instead-->
+<div class="all-posts-page-container">
+    <ul>
+        <li ng-repeat="post in bc.fullStackPosts">
+            <p>
+                {{post.title}}
+            </p>
+            <p>
+                {{post.category}}
+            </p>
+            <p>
+                {{post.timestamp}}
+            </p>
+            <p>
+                {{post.image}}
+            </p>
+            <p>
+                {{post.tags}}
+            </p>
+            <p>
+                {{post.content}}
+            </p>
+        </li>
+    </ul>
+</div>

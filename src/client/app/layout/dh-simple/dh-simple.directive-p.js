@@ -11,13 +11,15 @@ var dhSimpleGD;
             controller: dhSimpleGDController,
             controllerAs: 'dh'
         };
-        function dhSimpleGDController($state, $scope, $timeout, $rootScope) {
+        function dhSimpleGDController($state, $scope, $timeout, $rootScope, $stateParams) {
             var vm = this;
             vm.titleVisibility = false;
             vm.titleLargeValue = 'Digi &middot; Kindred';
             vm.titleIndex = 'a';
             vm.currentState = $state.current;
             vm.isArticle = false;
+            vm.stateParams = $stateParams;
+            vm.timeout = $timeout;
             $rootScope.$on('$stateChangeStart', function (event, toState) {
                 var state = toState;
                 if (state.name === 'dkindred-blogs.all') {
@@ -32,9 +34,11 @@ var dhSimpleGD;
                     vm.titleIndex = 'c';
                     vm.isArticle = false;
                 }
-                else if (state.name === 'link1') {
+                else if (state.name === 'dkindred-blogs.category') {
                     vm.titleVisibility = true;
-                    vm.titleLargeValue = 'Link1';
+                    vm.timeout(function () {
+                        vm.titleLargeValue = vm.stateParams.categoryId;
+                    }, 10);
                     vm.titleIndex = 'c';
                     vm.isArticle = false;
                 }

@@ -14,13 +14,19 @@ namespace dhSimpleGD {
             controllerAs: 'dh'
         };
 
-        function dhSimpleGDController($state: angular.ui.IStateService, $scope: angular.IScope, $timeout: angular.ITimeoutService, $rootScope: angular.IRootScopeService) {
+        function dhSimpleGDController($state: angular.ui.IStateService, $scope: angular.IScope, $timeout: angular.ITimeoutService, $rootScope: angular.IRootScopeService, $stateParams: angular.ui.IStateParamsService) {
             var vm = this;
             vm.titleVisibility = false;
             vm.titleLargeValue = 'Digi &middot; Kindred';
             vm.titleIndex = 'a';
             vm.currentState = $state.current;
             vm.isArticle = false;
+            vm.stateParams = $stateParams;
+            vm.timeout = $timeout;
+            // $timeout(function() {
+            //     console.log(vm.stateParams.categoryId, 'state parameters are working stored in vm');
+            // }, 1000);
+
 
             $rootScope.$on('$stateChangeStart', function(event, toState) {
                 var state = toState;
@@ -35,9 +41,11 @@ namespace dhSimpleGD {
                     vm.titleLargeValue = 'Workshop';
                     vm.titleIndex = 'c';
                     vm.isArticle = false;
-                } else if (state.name === 'link1') {
+                } else if (state.name === 'dkindred-blogs.category') {
                     vm.titleVisibility = true;
-                    vm.titleLargeValue = 'Link1';
+                    vm.timeout(function() {
+                        vm.titleLargeValue = vm.stateParams.categoryId;
+                    }, 10);
                     vm.titleIndex = 'c';
                     vm.isArticle = false;
                 } else if (state.name === 'link2') {
